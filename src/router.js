@@ -23,4 +23,11 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     }
   ]
+  // scrollBehavior: function(to) {
+  //   if (to.hash) {
+  //     return {
+  //       selector: to.hash
+  //     };
+  //   }
+  // }
 });

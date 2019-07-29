@@ -1,14 +1,14 @@
 <template>
   <div class="navbar">
     <div class="left">
-      <a :href="`tel:${contact}`" v-if="onTop">{{contact}}</a>
-      <a href="/" v-else>{{brandName}}</a>
+      <a :href="`tel:${contact}`" v-if="onTop">{{ contact }}</a>
+      <a href="#" v-scroll-to="'#topPage'" v-else>{{ brandName }}</a>
     </div>
     <div class="right">
       <!-- <a href="#" id="home">Home</a> -->
-      <a href="#" id="about">About</a>
-      <a href="#" id="products">Products</a>
-      <a href="#" id="partners">Partners</a>
+      <a href="#" v-scroll-to="'#aboutPage'" v-on:click="test" id="about">About</a>
+      <a href="#" v-scroll-to="'#productsPage'" id="products">Products</a>
+      <a href="#" v-scroll-to="'#aboutPage'" id="partners">Partners</a>
       <a href="#" id="contact">Contact</a>
     </div>
   </div>
@@ -26,6 +26,11 @@ export default {
   },
   computed: {
     ...mapState(["brandName", "contact"])
+  },
+  methods: {
+    test: () => {
+      window.scrollTo(document.querySelector("#about"));
+    }
   }
 };
 </script>
@@ -35,7 +40,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 * {
   color: #aa00a1;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-family: "PT Sans Narrow", sans-serif;
 }
 .navbar {
@@ -49,6 +54,13 @@ export default {
 }
 .right {
   display: flex;
+  font-size: 0.8em;
+}
+
+.right :hover {
+  text-decoration: underline;
+  transition-duration: 1s;
+  color: green;
 }
 a {
   padding-right: 20px;
