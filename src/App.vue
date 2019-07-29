@@ -12,13 +12,29 @@
 </template>
 
 <script>
+import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/Navbar";
-import $ from "jquery";
+import { truncate } from "fs";
 export default {
+  name: "App",
+  computed: mapGetters(["navOnTop"]),
   mounted() {
-    // const pagepiling = require("pagepiling.js");
-    // document.querySelector("pagepilling").pagepiling();
+    const vm = this;
+    window.onscroll = function() {
+      let res = true;
+      const scrollPosition =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollPosition > document.querySelector("#aboutPage").scrollHeight) {
+        res = false;
+      } else res = true;
+
+      if (this.navOnTop != res) {
+        vm.changeNavHeading(res);
+      }
+    };
+    this.changeNavHeading(true);
   },
+  methods: { ...mapMutations(["changeNavHeading"]) },
   components: {
     Navbar
   }

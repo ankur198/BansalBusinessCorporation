@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div class="left">
-      <a :href="`tel:${contact}`" v-if="onTop">{{ contact }}</a>
+      <a :href="`tel:${contact}`" v-if="internal.onTop">{{ contact }}</a>
       <a href="#" v-scroll-to="'#topPage'" v-else>{{ brandName }}</a>
     </div>
     <div class="right">
@@ -19,13 +19,9 @@ import { mapState } from "vuex";
 
 export default {
   name: "Navbar",
-  data: function() {
-    return {
-      onTop: false
-    };
-  },
+  props: ["onTop"],
   computed: {
-    ...mapState(["brandName", "contact"])
+    ...mapState(["brandName", "contact", "internal"])
   },
   methods: {
     test: () => {
