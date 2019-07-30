@@ -14,7 +14,6 @@
 <script>
 import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/Navbar";
-import { truncate } from "fs";
 export default {
   name: "App",
   computed: mapGetters(["navOnTop"]),
@@ -24,7 +23,10 @@ export default {
       let res = true;
       const scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
-      if (scrollPosition > document.querySelector("#aboutPage").scrollHeight) {
+      if (
+        scrollPosition + 10 >
+        document.querySelector("#aboutPage").scrollHeight
+      ) {
         res = false;
       } else res = true;
 

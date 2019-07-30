@@ -1,6 +1,7 @@
 <template>
   <div class="landingPage">
-    <h1>{{brandName}}</h1>
+    <h1>{{ brandName }}</h1>
+    <p>For all your computer hardware needs</p>
   </div>
 </template>
 
@@ -19,10 +20,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 .landingPage {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -30,5 +32,13 @@ export default {
   font-family: "Righteous", cursive;
   font-size: 2em;
   letter-spacing: 0.1em;
+
+  h1 {
+    font-weight: 100;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 </style>

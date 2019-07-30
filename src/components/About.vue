@@ -3,7 +3,19 @@
     <div class="gridBody">
       <div class="gridHead">
         <h1>About</h1>
-        <p>Lorem took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        <p>
+          With the commencement of 21st century started the era of modern
+          computers. With far sightedness and entrepreneurial skills, our
+          founder Mr. Sanjay Bansal started Bansal Business Corporation in the
+          year 2000 and started dealing in computer hardwares.
+        </p>
+        <p>
+          With the advancement in technology, the company has been coping up
+          rapidly and as a result of tireless efforts today we are proud to be
+          one of the largest distributor in Delhi NCR. We are happy to serve our
+          thousands of clients with our catalogue having a product range of over
+          1000 products.
+        </p>
       </div>
       <div class="line"></div>
       <div class="gridIcon">
@@ -23,8 +35,6 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
   name: "about"
 };
@@ -58,6 +68,7 @@ h1 {
 p {
   padding-left: 45px;
   line-height: 1.4em;
+  font-size: 1.2em;
 }
 .line {
   border: 1px solid white;

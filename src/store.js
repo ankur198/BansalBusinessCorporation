@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from "vue";
 import Vuex from "vuex";
 
@@ -6,12 +7,37 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         internal: {
-            onTop: true
+            onTop: true,
+            images: [
+                "apc.png",
+                "brother.png",
+                "canon.png",
+                "dell.jpg",
+                "epson.jpg",
+                "honeywell.jpg",
+                "hp.jpg",
+                "iball.svg",
+                "intex.jpg",
+                "kodak.jpg",
+                "logitech.jpg",
+                "luminous.jpg",
+                "microtek.jpg",
+                "prodot.jpg",
+                "ricoh.png",
+                "samsung.png",
+                "sharp.jpg",
+                "tvs.png",
+                "xerox.jpg",
+                "zebra.jpg"
+            ]
         },
         brandName: "Bansal Business Corporation",
         contact: "+91-987654321",
-        products: {
-            one: {
+        address:
+            "D21, Mahalaxmi Nagar, Malviya Nagar, Jaipur - 302017 (Behind World Trade Park), Rajasthan, India",
+        email: "abc@xyz.com",
+        products: [
+            {
                 printer: {
                     HP: [
                         "Inkjet Printer",
@@ -33,7 +59,7 @@ export default new Vuex.Store({
                 },
                 Scanner: {
                     Scanner: ["HP", "Brother", "Epson", "Canon", "Kodak"],
-                    Barcode_Scanner: [
+                    "Barcode Scanner": [
                         "TVS (Wired/BT/1D/2D)",
                         "Honeywell (Wired/BT/1D/2D)",
                         "Restall"
@@ -58,15 +84,15 @@ export default new Vuex.Store({
                         "Printonix"
                     ]
                 },
-                CompatibleConsumables: {
+                "Compatible Consumables": {
                     Cartridges: ["Prodot", "Lipi"],
-                    RibbonCartridges: ["Prodot", "Lipi"]
+                    "Ribbon Cartridges": ["Prodot", "Lipi"]
                 }
             },
 
-            two: {
-                Keyboard_Mouse: {
-                    All_Wired_and_Wireless_Combo_and_Individual: [
+            {
+                "Keyboard & Mouse": {
+                    "All Wired and Wireless Combo and Individual": [
                         "Logitech",
                         "Dell",
                         "Lenovo",
@@ -79,7 +105,7 @@ export default new Vuex.Store({
                     ]
                 },
                 Headset: {
-                    Headphones_Earphones: ["Logitech", "HP", "IBall"],
+                    "Headphones/Earphones": ["Logitech", "HP", "IBall"],
                     Webcams: ["Logitech"]
                 },
                 TFT: [
@@ -87,18 +113,18 @@ export default new Vuex.Store({
                     "HP Commercial",
                     "Dell",
                     "LG",
-                    "Samsumg",
+                    "Samsung",
                     "AOC",
                     "Acer"
                 ],
 
-                StorageDevice: {
+                "Storage Device": {
                     HDD: ["Seagate", "WD", "Samsung", "Toshiba"],
                     SSD: ["Seagate", "WD", "Samsung", "Toshiba"],
                     PenDrives: ["SanDisk", "HP", "Kingston"],
                     "CD/DVD": ["Writex"]
                 },
-                ComputingDevice: {
+                "Computing Device": {
                     Laptop: ["Dell", "HP", "Lenovo", "Acer", "Asus"],
                     Desktop: ["HP", "Dell", "Lenovo"],
                     "All in One": ["HP", "Dell", "Lenovo"]
@@ -112,7 +138,7 @@ export default new Vuex.Store({
                     "Networking Equipments"
                 ]
             }
-        }
+        ]
     },
     getters: {
         navOnTop: state => state.internal.onTop
