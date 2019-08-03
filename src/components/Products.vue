@@ -1,9 +1,7 @@
 <template>
   <div class="products" v-bind:class="isBlack">
-    <div class="mainheading">
-      {{ heading }}
-    </div>
-    <div class="allProducts">
+    <h1 class="mainheading">{{ heading }}</h1>
+    <div class="content">
       <div>
         <ProductsList :products="products" @itemSelected="setSubCategory" />
       </div>
@@ -55,43 +53,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
-.black {
-  color: white;
-  background-color: black;
-}
+
 .products {
   display: grid;
   grid-template-rows: auto 1fr;
-  width: 100%;
-  height: 100vh;
 }
-.mainheading {
-  font-weight: bolder;
-  white-space: nowrap;
-  font-size: 2.5em;
-  text-align: left;
-  padding: 20px;
-}
-.allProducts {
+.content {
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
-  padding: 0px 0;
   text-align: left;
   width: 100%;
   height: 100%;
   grid-gap: 20px;
-}
-
-h1 {
-  /* color: white; */
-  font-size: 3em;
-  margin-bottom: 0;
-}
-.line {
-  border: 1px solid;
-  width: 0px;
-  border-radius: 50%;
-  background: black;
 }
 </style>
