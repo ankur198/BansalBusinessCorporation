@@ -69,7 +69,7 @@ export default {
   margin: 0;
   text-align: left;
   padding: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .black {
   color: white !important;

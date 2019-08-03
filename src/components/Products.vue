@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     setSubCategory: function(data) {
-      console.log(data);
       this.subcategory = data;
       this.subsubcategory = [];
     },

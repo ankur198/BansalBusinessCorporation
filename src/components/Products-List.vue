@@ -41,10 +41,8 @@ export default {
 .productsList {
   display: flex;
   align-items: center;
-  // flex-direction: column;
   justify-content: center;
   width: 100%;
-  // height: 100%;
   font-family: "PT Sans Narrow", sans-serif;
   letter-spacing: 0.1em;
 }
