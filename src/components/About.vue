@@ -21,7 +21,15 @@
       <div class="gridIcon">
         <div>
           <i class="material-icons">assignment_late</i>
-          200+
+          <div class="iCountUp">
+            <ICountUp
+              id="test"
+              :delay="delay"
+              :endVal="endVal"
+              :options="options"
+              @ready="onReady"
+            />
+          </div>
         </div>
         <div>
           <i class="material-icons">check_circle_outline</i>
@@ -35,14 +43,71 @@
 </template>
 
 <script>
+import ICountUp from "vue-countup-v2";
+import { setTimeout, setInterval } from "timers";
 export default {
-  name: "about"
+  name: "about",
+  components: {
+    ICountUp
+  },
+  data() {
+    return {
+      delay: 1000,
+      endVal: 120500,
+      options: {
+        useEasing: true,
+        useGrouping: true,
+        separator: ",",
+        decimal: ".",
+        prefix: "",
+        suffix: ""
+      }
+    };
+  },
+  methods: {
+    onReady: function(instance, CountUp) {
+      const that = this;
+      // instance.update(that.endVal + 100);
+      window.onscroll = function() {
+        const scrollPosition =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const aboutHeight = document.querySelector("#aboutPage").scrollHeight;
+        if (
+          scrollPosition - 10 >= aboutHeight &&
+          scrollPosition + 10 <= aboutHeight
+        ) {
+          console.log(scrollPosition);
+        }
+      };
+    }
+  },
+  mounted() {
+    // setInterval(() => {
+    //   console.log("hello");
+    // }, 2000);
+    // const vm = this;
+    // console.log("hello");
+    // window.onscroll = function() {
+    //   const scrollPosition =
+    //     document.documentElement.scrollTop || document.body.scrollTop;
+    //   console.log(scrollPosition);
+    //   // if (scrollPosition == document.querySelector("#aboutPage").scrollHeight) {
+    //   //   document.querySelector("#test").reset();
+    //   //   document.querySelector("#test").start();
+    //   // }
+    // };
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+.iCountUp {
+  font-size: 2em;
+  margin: 0;
+  color: #4d63bc;
+}
 .about {
   display: flex;
   align-items: center;

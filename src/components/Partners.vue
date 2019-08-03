@@ -30,19 +30,17 @@ export default {
   justify-content: flex-start;
   width: 100%;
   height: 100vh;
-  font-family: "PT Sans Narrow", sans-serif;
-  letter-spacing: 0.1em;
   div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
   }
   h1 {
-    // font-family: "Gabriola";
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3em;
-    margin-top: 70px;
-    margin-bottom: 50px;
+    // margin-top: 70px;
+    // margin-bottom: 50px;
+    margin: 10px;
   }
 }
 $size: 90px;

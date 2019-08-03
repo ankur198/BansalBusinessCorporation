@@ -31,7 +31,6 @@ export default {
   height: 100vh;
   font-family: "Righteous", cursive;
   font-size: 2em;
-  letter-spacing: 0.1em;
 
   h1 {
     font-weight: 100;

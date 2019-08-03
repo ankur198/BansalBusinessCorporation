@@ -53,18 +53,18 @@ export default {
 }
 .gridContent {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 .gridDetails {
-  padding: 50px;
+  padding: 20px;
 }
 .gridForm {
-  padding: 40px;
+  padding: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 h1 {
   font-family: "Gabriola";

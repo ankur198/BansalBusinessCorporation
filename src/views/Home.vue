@@ -45,3 +45,17 @@ export default {
   computed: mapState(["products"])
 };
 </script>
+
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+* {
+  box-sizing: border-box;
+}
+.home > div {
+  padding: 50px;
+  padding-top: 70px;
+  letter-spacing: 0.1em;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+</style>
+
