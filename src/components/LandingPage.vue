@@ -1,8 +1,7 @@
 <template>
   <div class="landingPage">
     <div class="page">
-      <h1>{{ brandName }}</h1>
-      <p>For all your computer hardware needs</p>
+      <h1>FOR ALL YOUR <br> COMPUTER <br>HARDWARE<br> NEEDS</h1>
     </div>
   </div>
 </template>
@@ -28,16 +27,25 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
+  // width: 100%;
+  // height: 100vh;
   font-size: 2em;
 
+              padding: 50px;
+            margin-top: 110px;
+            margin-bottom: 110px;
+            background-color:rgb(6, 26, 49);
+
   h1 {
-    font-weight: 100;
-    margin: 0;
-  }
-  p {
-    margin: 0;
+      font-family: calluna;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 70px;
+      letter-spacing: .01em;
+      line-height: 1em;
+      text-transform: none;
+      color: #f2f2f2;
+      text-align: center;
   }
 }
 </style>
