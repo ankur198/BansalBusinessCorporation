@@ -51,11 +51,10 @@ ul {
   li {
     font-size: 1.5em;
     list-style: none;
-    // padding-left: 30px;
-    line-height: 1.4em;
+    line-height: 1.8em;
     text-transform: capitalize;
     &:hover {
-      color: darkgray;
+      color: rgb(229, 74, 53);
     }
   }
 }
