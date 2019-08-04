@@ -24,8 +24,9 @@ export default {
       const scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
       if (
-        scrollPosition + 10 >
-        document.querySelector("#aboutPage").scrollHeight
+        // scrollPosition + 10 >
+        // document.querySelector("#aboutPage").scrollHeight
+        scrollPosition > 50
       ) {
         res = false;
       } else res = true;

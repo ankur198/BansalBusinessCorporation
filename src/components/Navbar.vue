@@ -49,6 +49,7 @@ export default {
   align-items: center;
   padding: 20px;
   padding-top: 10px;
+  z-index: 5000;
 }
 .left {
   font-size: 1.2em;
