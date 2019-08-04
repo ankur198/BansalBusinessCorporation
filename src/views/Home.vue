@@ -2,20 +2,20 @@
   <div class="home">
     <!-- <full-page ref="fullpage" id="fullpage"> -->
     <LandingPage class="section" id="topPage" />
-    <About class="section black" id="aboutPage" />
+    <About class="section" id="aboutPage" />
     <Products
       :products="products[0]"
       heading="Products"
-      class="section"
+      class="section black"
       id="productsPage"
     />
     <Products
       :products="products[1]"
       heading="More Products"
-      class="section black"
+      class="section"
       id="productsPage2"
     />
-    <Partners class="section" id="partnersPage" />
+    <Partners class="section black" id="partnersPage" />
     <Contact id="contactPage" />
     <!-- </full-page> -->
   </div>
@@ -47,14 +47,16 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
+$Montserrat: "Montserrat", sans-serif;
+$Roboto: "Roboto", sans-serif;
 * {
   box-sizing: border-box;
 }
 .section {
   padding: 50px;
   padding-top: 70px;
-  letter-spacing: 0.1em;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: $Montserrat;
   color: black;
   width: 100%;
   height: 100vh;
@@ -65,11 +67,13 @@ export default {
   padding-left: 100px;
 }
 .mainheading {
-  font-size: 4rem;
+  font-family: $Roboto;
+  font-size: 5rem;
   margin: 0;
   text-align: left;
   padding: 50px;
-  margin-bottom: 20px;
+  margin: 80px 0 10px;
+  font-weight: 500;
 }
 .black {
   color: white !important;
