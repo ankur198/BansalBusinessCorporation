@@ -34,8 +34,6 @@
 </template>
 
 <script>
-// import ICountUp from "vue-countup-v2";
-import { setTimeout, setInterval } from "timers";
 export default {
   name: "about"
 };
@@ -45,14 +43,12 @@ export default {
 <style scoped lang="scss">
 .about {
   display: grid;
-  background-color: black;
   grid-template-rows: auto 1fr;
 }
 .content {
   display: grid;
   grid-template-columns: 1.3fr 1px 1fr;
   grid-gap: 40px;
-  color: lightgray;
   text-align: left;
 }
 .left {
@@ -60,7 +56,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   p {
-    line-height: 1.4em;
+    line-height: 1.3em;
   }
 }
 .right {
