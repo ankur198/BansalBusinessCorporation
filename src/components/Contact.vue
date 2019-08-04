@@ -47,8 +47,6 @@ export default {
   height: 100vh;
   font-family: "PT Sans Narrow", sans-serif;
   letter-spacing: 0.1em;
-  background-color: black;
-  color: white;
 }
 .gridContent {
   height: 100%;

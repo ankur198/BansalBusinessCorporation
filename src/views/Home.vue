@@ -64,13 +64,13 @@ $Roboto: "Roboto", sans-serif;
 $RobotoSlab: "Roboto Slab", serif;
 
 .section {
-  padding: 50px;
-  padding-top: 70px;
   font-family: $RobotoSlab;
   color: black;
-  height: 100vh;
   font-size: 1.3em;
-  // line-height: 1.4em;
+}
+.fp-tableCell {
+  display: grid;
+  align-items: center;
 }
 .content {
   padding-left: 100px;
@@ -81,7 +81,7 @@ $RobotoSlab: "Roboto Slab", serif;
   margin: 0;
   text-align: left;
   padding: 50px;
-  margin: 80px 0 10px;
+  margin: 10px 0 10px;
   font-weight: 500;
 }
 .black {

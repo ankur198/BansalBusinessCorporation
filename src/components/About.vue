@@ -45,7 +45,6 @@ export default {
 <style scoped lang="scss">
 .page {
   display: grid;
-  grid-template-rows: auto 1fr;
 }
 .content {
   display: grid;
