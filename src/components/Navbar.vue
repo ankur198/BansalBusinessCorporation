@@ -37,8 +37,8 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 * {
-  color: rgb(252, 108, 125);
-  font-size: 1.4em;
+  color: rgb(229, 74, 53);
+  font-size: 1.2em;
   font-family: "PT Sans Narrow", sans-serif;
 }
 .navbar {
@@ -56,18 +56,15 @@ export default {
 .right {
   display: flex;
   font-size: 0.9em;
+  transition-duration: 0.2s;
 }
 
 .right :hover {
-  text-decoration: underline;
-  transition-duration: 1s;
-  color: green;
+  /* text-decoration: underline; */
+  color: darkgray;
 }
 a {
   padding-right: 20px;
   text-decoration: none;
-}
-a:last-child {
-  margin-right: 20px;
 }
 </style>
