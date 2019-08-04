@@ -1,20 +1,22 @@
 <template>
   <div class="products" v-bind:class="isBlack">
-    <h1 class="mainheading">{{ heading }}</h1>
-    <div class="content">
-      <div>
-        <ProductsList :products="products" @itemSelected="setSubCategory" />
-      </div>
-      <div class="line"></div>
-      <div>
-        <ProductsList
-          :products="subcategory"
-          @itemSelected="setSubSubCategory"
-        />
-      </div>
-      <div v-if="subsubcategory.length > 0" class="line"></div>
-      <div>
-        <ProductsList :products="subsubcategory" />
+    <div class="page">
+      <h1 class="mainheading">{{ heading }}</h1>
+      <div class="content">
+        <div>
+          <ProductsList :products="products" @itemSelected="setSubCategory" />
+        </div>
+        <div class="line"></div>
+        <div>
+          <ProductsList
+            :products="subcategory"
+            @itemSelected="setSubSubCategory"
+          />
+        </div>
+        <div v-if="subsubcategory.length > 0" class="line"></div>
+        <div>
+          <ProductsList :products="subsubcategory" />
+        </div>
       </div>
     </div>
   </div>
@@ -53,7 +55,7 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 
-.products {
+.page {
   display: grid;
   grid-template-rows: auto 1fr;
 }

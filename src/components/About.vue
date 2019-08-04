@@ -1,32 +1,34 @@
 <template>
   <div class="about">
-    <h1 class="mainheading">About</h1>
-    <div class="content">
-      <div class="left">
-        <p>
-          With the commencement of 21st century started the era of modern
-          computers. With far sightedness and entrepreneurial skills, our
-          founder Mr. Sanjay Bansal started Bansal Business Corporation in the
-          year 2000 and started dealing in computer hardwares.
-        </p>
-        <p>
-          With the advancement in technology, the company has been coping up
-          rapidly and as a result of tireless efforts today we are proud to be
-          one of the largest distributor in Delhi NCR. We are happy to serve our
-          thousands of clients with our catalogue having a product range of over
-          1000 products.
-        </p>
-      </div>
-      <div class="line"></div>
-      <div class="right">
-        <div>
-          <i class="material-icons">assignment_late</i>
+    <div class="page">
+      <h1 class="mainheading">About</h1>
+      <div class="content">
+        <div class="left">
+          <p>
+            With the commencement of 21st century started the era of modern
+            computers. With far sightedness and entrepreneurial skills, our
+            founder Mr. Sanjay Bansal started Bansal Business Corporation in the
+            year 2000 and started dealing in computer hardwares.
+          </p>
+          <p>
+            With the advancement in technology, the company has been coping up
+            rapidly and as a result of tireless efforts today we are proud to be
+            one of the largest distributor in Delhi NCR. We are happy to serve
+            our thousands of clients with our catalogue having a product range
+            of over 1000 products.
+          </p>
         </div>
-        <div>
-          <i class="material-icons">check_circle_outline</i>
-        </div>
-        <div>
-          <i class="material-icons">dashboard</i>
+        <div class="line"></div>
+        <div class="right">
+          <div>
+            <i class="material-icons">assignment_late</i>
+          </div>
+          <div>
+            <i class="material-icons">check_circle_outline</i>
+          </div>
+          <div>
+            <i class="material-icons">dashboard</i>
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +43,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.about {
+.page {
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -56,6 +58,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   p {
+    margin-top: 0;
     line-height: 1.3em;
   }
 }

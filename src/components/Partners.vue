@@ -1,13 +1,15 @@
 <template>
   <div class="partners">
-    <h1 class="mainheading">Partners</h1>
-    <div>
-      <img
-        v-for="(brand, index) in internal.images"
-        :src="`/img/brands/${brand}`"
-        :alt="brand"
-        :key="index"
-      />
+    <div class="page">
+      <h1 class="mainheading">Partners</h1>
+      <div>
+        <img
+          v-for="(brand, index) in internal.images"
+          :src="`/img/brands/${brand}`"
+          :alt="brand"
+          :key="index"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -22,7 +24,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.partners {
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +34,7 @@ export default {
   }
   div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
 
     $size: 130px;

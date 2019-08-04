@@ -43,8 +43,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: "PT Sans Narrow", sans-serif;
-  letter-spacing: 0.1em;
+  font-size: 0.9em;
 }
 
 ul {
