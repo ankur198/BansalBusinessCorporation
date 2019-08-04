@@ -13,7 +13,7 @@
             @itemSelected="setSubSubCategory"
           />
         </div>
-        <div v-if="subsubcategory.length > 0" class="line"></div>
+        <div v-if="isSubSubCategory()" class="line"></div>
         <div>
           <ProductsList :products="subsubcategory" />
         </div>
@@ -36,7 +36,12 @@ export default {
   methods: {
     setSubCategory: function(data) {
       this.subcategory = data;
-      this.subsubcategory = [];
+      if (Array.isArray(data)) {
+        this.subsubcategory = [];
+      } else {
+        const fk = Object.keys(data)[0];
+        this.subsubcategory = data[fk];
+      }
     },
     setSubSubCategory: function(data) {
       this.subsubcategory = data;
