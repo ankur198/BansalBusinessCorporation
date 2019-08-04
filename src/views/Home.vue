@@ -62,15 +62,12 @@ export default {
 $Montserrat: "Montserrat", sans-serif;
 $Roboto: "Roboto", sans-serif;
 $RobotoSlab: "Roboto Slab", serif;
-* {
-  box-sizing: border-box;
-}
+
 .section {
   padding: 50px;
   padding-top: 70px;
   font-family: $RobotoSlab;
   color: black;
-  width: 100%;
   height: 100vh;
   font-size: 1.3em;
   // line-height: 1.4em;

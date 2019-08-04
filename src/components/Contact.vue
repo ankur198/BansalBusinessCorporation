@@ -44,7 +44,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100vh;
   font-family: "PT Sans Narrow", sans-serif;
   letter-spacing: 0.1em;
@@ -52,7 +51,6 @@ export default {
   color: white;
 }
 .gridContent {
-  width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;

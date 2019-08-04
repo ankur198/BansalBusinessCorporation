@@ -56,16 +56,19 @@ export default {
 }
 .right {
   display: flex;
+  justify-content: space-evenly;
   font-size: 0.9em;
 }
 
 .right :hover {
-  /* text-decoration: underline; */
   transition-duration: 0.3s;
   color: darkgray;
 }
 a {
-  padding-right: 20px;
+  margin-right: 20px;
   text-decoration: none;
+}
+a:last-child {
+  padding-right: 20px;
 }
 </style>
