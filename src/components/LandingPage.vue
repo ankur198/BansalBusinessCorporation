@@ -33,6 +33,7 @@ export default {
 <style scoped lang="scss">
 h2 {
   transition-duration: 0.5s;
+  z-index: 5001;
   &:hover {
     color: #e54a36;
   }
@@ -51,7 +52,6 @@ h2 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    z-index: 5001;
     :hover {
       color: #e54a36;
     }
