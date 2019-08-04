@@ -1,29 +1,47 @@
 <template>
   <div class="contact">
-    <div class="gridContent">
-      <div class="gridDetails">
-        <h1>Contact Details</h1>
-        <b>{{ brandName }}</b>
-        <address>
-          {{ address }}
-        </address>
-        <br />
-        <a href="#">{{ email }}</a>
+    <div class="page">
+      <div class="left">
+        <h2>Contact</h2>
+        <h3>Location</h3>
+        <p>
+          39,Veer Savarkar Block,<br />
+          Vikas Marg Delhi-110092
+        </p>
+        <h3>Contact</h3>
+        <p>
+          bsc43@hotmail.com <br />bansal@bansalworld.in<br />
+          011-49044230/ 8130869001
+        </p>
       </div>
-      <div class="gridForm">
-        Full Name:<br /><input type="text" name="name" id="name" /><br /><br />
-        Phone Number:<br /><input
-          type="number"
-          name="phn"
-          id="phn"
-        /><br /><br />
-        Email Address:<br /><input
+      <div class="right">
+        <h2>For more queries...</h2>
+        <p>Name*</p>
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="First Name"
+          required
+        />
+        <p>Email Address*</p>
+        <input
           type="email"
           name="email"
           id="email"
-        /><br /><br />
-        Message:<br /><textarea name="msg" id="msd"></textarea><br /><br />
-        <input type="submit" value="SEND MESSAGE" id="btn" />
+          placeholder="Email"
+          required
+        />
+        <p>How Can We Help?</p>
+        <textarea
+          name="msg"
+          id="msg"
+          cols="30"
+          rows="10"
+          placeholder="Your Text Here..."
+        ></textarea
+        ><br />
+        <input type="submit" value="Submit" class="btn" />
       </div>
     </div>
   </div>
@@ -38,51 +56,62 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
-.contact {
+<style scoped lang="scss">
+.page {
   display: flex;
+  /* grid-template-columns: 1fr 1fr; */
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: "PT Sans Narrow", sans-serif;
-  letter-spacing: 0.1em;
-}
-.gridContent {
+  justify-content: space-evenly;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-.gridDetails {
-  padding: 20px;
-}
-.gridForm {
-  padding: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.3em;
 }
-h1 {
-  font-family: "Gabriola";
-  font-size: 3.5em;
-  margin: 0px;
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Candara";
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3em;
 }
-b {
-  font-family: "Gabriola";
-  font-size: 1.8em;
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Candara";
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: capitalize;
+  line-height: 1.3em;
+  p {
+    margin: 20px 0 2px;
+  }
 }
-address {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
+h2 {
+  margin: 25px;
+  font-family: calluna;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2em;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: #081b33;
 }
-a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fc6c7d;
-  font-size: 20px;
+h3 {
+  color: #e54a35;
+  margin: 10px;
+}
+p {
+  margin: 2px;
+  margin-bottom: 50px;
 }
 input,
 textarea {
-  margin-top: 5px;
+  margin-top: 10px;
   width: 30em;
   padding: 8px;
   border: 1px solid gray;
@@ -91,11 +120,12 @@ textarea {
 textarea {
   height: 80px;
 }
-#btn {
+.btn {
   width: 10em;
   height: 3em;
+  letter-spacing: 0.1em;
   border: 1px solid transparent;
-  background-color: rgb(230, 43, 30);
+  background-color: #081b33;
   color: white;
 }
 </style>
