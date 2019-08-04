@@ -1,7 +1,16 @@
 <template>
   <div class="landingPage">
     <div class="page">
-      <h1>FOR ALL YOUR <br> COMPUTER <br>HARDWARE<br> NEEDS</h1>
+      <div class="mainheading">
+        <h2>Bansal Business Corporation</h2>
+      </div>
+      <div class="backdrop">
+        <h1>
+          FOR ALL YOUR <br />
+          COMPUTER <br />HARDWARE<br />
+          NEEDS
+        </h1>
+      </div>
     </div>
   </div>
 </template>
@@ -22,30 +31,47 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+h2 {
+  transition-duration: 0.5s;
+  &:hover {
+    color: #e54a36;
+  }
+}
 .page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  // width: 100%;
-  // height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  height: 100%;
   font-size: 2em;
+  font-family: serif;
 
-              padding: 50px;
-            margin-top: 110px;
-            margin-bottom: 110px;
-            background-color:rgb(6, 26, 49);
+  .mainheading {
+    text-align: center;
+    font-size: 0.4em;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 5001;
+    :hover {
+      color: #e54a36;
+    }
+  }
 
-  h1 {
-      font-family: calluna;
+  .backdrop {
+    background-color: rgb(6, 26, 49);
+    display: flex;
+    padding: 50px;
+    padding-top: 110px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    h1 {
       font-weight: 400;
-      font-style: normal;
       font-size: 70px;
-      letter-spacing: .01em;
+      letter-spacing: 0.01em;
       line-height: 1em;
-      text-transform: none;
       color: #f2f2f2;
-      text-align: center;
+    }
   }
 }
 </style>
