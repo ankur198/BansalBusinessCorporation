@@ -27,6 +27,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  h1 {
+    align-self: flex-start;
+  }
   div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
