@@ -57,11 +57,11 @@ export default {
 .right {
   display: flex;
   font-size: 0.9em;
-  transition-duration: 0.2s;
 }
 
 .right :hover {
   /* text-decoration: underline; */
+  transition-duration: 0.3s;
   color: darkgray;
 }
 a {
