@@ -91,7 +91,7 @@ $WeblySleek: "weblysleekuisb";
   padding: 50px;
   margin: 10px 0 10px;
   font-weight: 500;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .black {
   color: white !important;
