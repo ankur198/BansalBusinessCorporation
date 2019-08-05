@@ -19,12 +19,11 @@
         :arrows="false"
         :dragging-distance="70"
         :touchable="false"
-        :fixedHeight="true"
       >
         <vueper-slide
           v-for="(brand, i) in internal.images"
           :key="i"
-          :image="`/img/brands/${brand}`"
+          :image="`/img/brands/tinified/${brand}`"
         ></vueper-slide>
       </vueper-slides>
     </div>
