@@ -85,12 +85,13 @@ $WeblySleek: "weblysleekuisb";
 }
 .mainheading {
   font-family: $WeblySleek;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin: 0;
   text-align: left;
   padding: 50px;
   margin: 10px 0 10px;
   font-weight: 500;
+  text-transform: capitalize;
 }
 .black {
   color: white !important;
