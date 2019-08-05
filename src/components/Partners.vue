@@ -19,6 +19,7 @@
         :arrows="false"
         :dragging-distance="70"
         :touchable="false"
+        :fixedHeight="true"
       >
         <vueper-slide
           v-for="(brand, i) in internal.images"
