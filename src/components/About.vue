@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="page">
-      <h1 class="mainheading">About</h1>
+      <h1 class="mainheading">about</h1>
       <div class="content">
         <div class="left">
           <p>

@@ -2,7 +2,7 @@
   <div class="landingPage">
     <div class="page">
       <div class="mainheading">
-        <h2>Bansal Business Corporation</h2>
+        <h2>bansal business corporation</h2>
       </div>
       <div class="backdrop">
         <h1>

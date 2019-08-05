@@ -5,7 +5,7 @@
       <About class="section" id="aboutPage" />
       <Products
         :products="products[0]"
-        heading="Products"
+        heading="products"
         class="section black"
         id="productsPage"
       />
@@ -85,7 +85,7 @@ $WeblySleek: "weblysleekuisb";
 }
 .mainheading {
   font-family: $WeblySleek;
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin: 0;
   text-align: left;
   padding: 50px;
