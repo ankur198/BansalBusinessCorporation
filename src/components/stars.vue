@@ -52,27 +52,27 @@ body {
 //Change colors for multi-colors star groups
 
 #stars-group-1 {
-  @include stars-content(1800, #fff, 200, 1, 0);
+  @include stars-content(1800, #fff, 200, 2, 0);
 }
 
 #stars-group-2 {
-  @include stars-content(1800, #fff, 200, 1, 0.1);
+  @include stars-content(1800, #fff, 200, 7, 0.1);
 }
 
 #stars-group-3 {
-  @include stars-content(1800, #fff, 200, 1, 0.2);
+  @include stars-content(1800, #fff, 200, 3, 0.2);
 }
 
 #stars-group-4 {
-  @include stars-content(1800, #fff, 200, 1, 0.3);
+  @include stars-content(1800, #fff, 200, 2, 0.3);
 }
 
 #stars-group-5 {
-  @include stars-content(1800, #fff, 200, 1, 0.4);
+  @include stars-content(1800, #fff, 200, 2, 0.4);
 }
 
 #stars-group-6 {
-  @include stars-content(1800, #fff, 200, 1, 0.5);
+  @include stars-content(1800, #fff, 200, 2, 0.5);
 }
 
 @keyframes glowing-stars {
