@@ -11,7 +11,7 @@
       />
       <Products
         :products="products[1]"
-        heading="we got more products..."
+        heading="we got more products"
         class="section"
         id="productsPage2"
       />

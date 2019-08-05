@@ -1,7 +1,7 @@
 <template>
   <div class="partners">
     <div class="page">
-      <h1 class="mainheading">our proud partners...</h1>
+      <h1 class="mainheading">our proud partners</h1>
       <!-- <div>
         <img
           v-for="(brand, index) in internal.images"
