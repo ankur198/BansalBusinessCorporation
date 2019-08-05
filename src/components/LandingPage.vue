@@ -40,16 +40,18 @@ h2 {
 }
 .page {
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 3fr 7fr 1fr;
   height: 100%;
   font-size: 2em;
   font-family: serif;
 
   .mainheading {
+    font-family: "Candara";
     text-align: center;
     font-size: 0.4em;
     padding: 0;
     display: flex;
+    margin: 0;
     align-items: flex-start;
     justify-content: center;
     :hover {
@@ -60,12 +62,13 @@ h2 {
   .backdrop {
     background-color: rgb(6, 26, 49);
     display: flex;
-    padding: 50px;
-    padding-top: 110px;
+    // padding-top: 110px;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 
     h1 {
+      // padding: 50px;
       font-weight: 400;
       font-size: 70px;
       letter-spacing: 0.01em;

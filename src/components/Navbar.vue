@@ -7,11 +7,11 @@
     <div class="right">
       <!-- <a href="#" id="home">Home</a> -->
       <a href="#" v-scroll-to="'#aboutPage'" v-on:click="test" id="about"
-        >About</a
+        >about</a
       >
-      <a href="#" v-scroll-to="'#productsPage'" id="products">Products</a>
-      <a href="#" v-scroll-to="'#partnersPage'" id="partners">Partners</a>
-      <a href="#" v-scroll-to="'#contactPage'" id="contact">Contact</a>
+      <a href="#" v-scroll-to="'#productsPage'" id="products">products</a>
+      <a href="#" v-scroll-to="'#partnersPage'" id="partners">partners</a>
+      <a href="#" v-scroll-to="'#contactPage'" id="contact">contact</a>
     </div>
   </div>
 </template>
@@ -52,7 +52,7 @@ export default {
   z-index: 5000;
 }
 .left {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .right {
   display: flex;

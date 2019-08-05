@@ -59,12 +59,20 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Slab&display=swap");
+@font-face {
+  font-family: weblysleekuisb;
+  src: url(../../public/weblysleekuisb.ttf);
+}
 $Montserrat: "Montserrat", sans-serif;
 $Roboto: "Roboto", sans-serif;
 $RobotoSlab: "Roboto Slab", serif;
+$WeblySleek: "weblysleekuisb";
 
+// * {
+//   box-sizing: border-box;
+// }
 .section {
-  font-family: $RobotoSlab;
+  font-family: $WeblySleek;
   color: black;
   font-size: 1.3em;
 }
@@ -76,7 +84,7 @@ $RobotoSlab: "Roboto Slab", serif;
   padding-left: 100px;
 }
 .mainheading {
-  font-family: $RobotoSlab;
+  font-family: $WeblySleek;
   font-size: 5rem;
   margin: 0;
   text-align: left;
