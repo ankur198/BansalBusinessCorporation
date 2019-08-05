@@ -1,5 +1,6 @@
 <template>
   <div class="partners">
+    <Stars />
     <div class="page">
       <h1 class="mainheading">our proud partners</h1>
       <!-- <div>
@@ -34,10 +35,11 @@
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 import { mapState } from "vuex";
+import Stars from "./stars";
 export default {
   name: "partners",
   computed: mapState(["internal"]),
-  components: { VueperSlides, VueperSlide }
+  components: { VueperSlides, VueperSlide, Stars }
 };
 </script>
 

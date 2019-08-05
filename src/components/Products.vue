@@ -1,5 +1,6 @@
 <template>
-  <div class="products" v-bind:class="isBlack">
+  <div class="products">
+    <Stars />
     <div class="page">
       <h1 class="mainheading">{{ heading }}</h1>
       <div class="content">
@@ -24,9 +25,10 @@
 
 <script>
 import ProductsList from "./Products-List.vue";
+import Stars from "./stars";
 export default {
   name: "products",
-  props: ["products", "heading", "isBlack"],
+  props: ["products", "heading"],
   data: function() {
     return {
       subcategory: [],
@@ -51,7 +53,8 @@ export default {
     }
   },
   components: {
-    ProductsList
+    ProductsList,
+    Stars
   }
 };
 </script>
