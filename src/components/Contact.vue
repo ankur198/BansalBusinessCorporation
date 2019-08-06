@@ -128,4 +128,29 @@ textarea {
   background-color: #081b33;
   color: white;
 }
+@media only screen and (max-width: 1000px) {
+  .page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+  }
+  input,
+  textarea {
+    width: 300px;
+  }
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin: 0px;
+    margin-top: 10px;
+  }
+  .right {
+    p {
+      margin: 5px;
+    }
+  }
+}
 </style>

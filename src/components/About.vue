@@ -69,4 +69,24 @@ export default {
 .right i {
   font-size: 3.5em;
 }
+@media only screen and (max-width: 1000px)
+{
+  .mainheading{
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 100px;
+  }
+  .content{
+    display:unset;
+    .left{
+          p {
+            display: unset;
+            margin: 0;
+            font-size: 1em;
+            padding: 10px;
+            width: 400px;
+            }
+      }
+    }
+  }
 </style>
