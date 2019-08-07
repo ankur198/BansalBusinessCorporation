@@ -3,30 +3,24 @@
     <Stars />
     <div class="page">
       <h1 class="mainheading">our proud partners</h1>
-      <!-- <div>
-        <img
-          v-for="(brand, index) in internal.images"
-          :src="`/img/brands/${brand}`"
-          :alt="brand"
-          :key="index"
-        />
-      </div> -->
-      <vueper-slides
-        autoplay
-        :speed="1000"
-        :pauseOnHover="false"
-        :slide-ratio="1 / 4"
-        :visible-slides="4"
-        :arrows="false"
-        :dragging-distance="70"
-        :touchable="false"
-      >
-        <vueper-slide
-          v-for="(brand, i) in internal.images"
-          :key="i"
-          :image="`/img/brands/tinified/${brand}`"
-        ></vueper-slide>
-      </vueper-slides>
+      <div class="content">
+        <vueper-slides
+          autoplay
+          :speed="1000"
+          :pauseOnHover="false"
+          :slide-ratio="1 / 4"
+          :visible-slides="4"
+          :arrows="false"
+          :dragging-distance="70"
+          :touchable="false"
+        >
+          <vueper-slide
+            v-for="(brand, i) in internal.images"
+            :key="i"
+            :image="`/img/brands/tinified/${brand}`"
+          ></vueper-slide>
+        </vueper-slides>
+      </div>
     </div>
   </div>
 </template>
@@ -44,16 +38,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-// .page {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: flex-start;
-//   h1 {
-//     align-self: flex-start;
-//   }
-// }
+<style lang="scss">
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+}
+.content {
+  display: grid;
+}
+
+.vueperslides__bullets--outside {
+  display: none;
+}
 
 .vueperslide {
   background-repeat: no-repeat;
@@ -68,11 +65,11 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: Tahoma, Geneva, sans-serif;
+    // font-family: Tahoma, Geneva, sans-serif;
   }
 
   &__title {
-    font-size: 7em;
+    // font-size: 7em;
     opacity: 0.6;
     color: #fff;
   }

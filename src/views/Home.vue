@@ -10,8 +10,8 @@
         class="section"
         id="productsPage2"
       />
-      <!-- <Partners class="section black" id="partnersPage" /> -->
-      <!-- <Contact class="section" id="contactPage" /> -->
+      <Partners class="section black" id="partnersPage" />
+      <Contact class="section" id="contactPage" />
     </full-page>
   </div>
 </template>

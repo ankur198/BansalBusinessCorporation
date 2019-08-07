@@ -70,7 +70,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
   text-align: left;
-  height: 100%;
+  // height: 100%;
   grid-gap: 5px;
 }
 </style>
