@@ -63,9 +63,6 @@ $Roboto: "Roboto", sans-serif;
 $RobotoSlab: "Roboto Slab", serif;
 $WeblySleek: "weblysleekuisb";
 
-// * {
-//   box-sizing: border-box;
-// }
 .section {
   font-family: $WeblySleek;
   color: black;
@@ -107,6 +104,16 @@ $WeblySleek: "weblysleekuisb";
   border: 1px solid;
   width: 0px;
   border-radius: 50%;
+}
+@media only screen and (min-width: 500px) {
+  .section {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .section {
+    font-size: 1.2em;
+  }
 }
 </style>
 
