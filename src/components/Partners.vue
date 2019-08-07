@@ -8,8 +8,8 @@
           autoplay
           :speed="1000"
           :pauseOnHover="false"
-          :slide-ratio="1 / 4"
-          :visible-slides="4"
+          :slide-ratio="1 /3"
+          :visible-slides="3"
           :arrows="false"
           :dragging-distance="70"
           :touchable="false"
