@@ -53,7 +53,8 @@ h2 {
     padding: 0;
     display: flex;
     margin: 0;
-    align-items: center;
+    align-self: flex-end;
+    align-items: flex-end;
     justify-content: center;
     :hover {
       color: #e54a36;

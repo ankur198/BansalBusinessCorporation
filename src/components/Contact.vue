@@ -11,7 +11,7 @@
               <br />Vikas Marg Delhi-110092
             </p>
           </div>
-          <div class="Vline"></div>
+          <div class="line"></div>
           <div>
             <h3>Contact</h3>
             <p>
@@ -53,7 +53,6 @@ export default {
 .content {
   display: flex;
   flex-direction: column-reverse;
-  // flex-direction: row-reverse;
 }
 .left {
   display: grid;
@@ -86,26 +85,45 @@ h2 {
 }
 h3 {
   color: #e54a35;
-  // margin: 10px;
 }
 
 input,
 textarea {
-  // margin-bottom: 10px;
-  // width: 30em;
   padding: 5px;
   border: 1px solid gray;
   border-radius: 5px;
 }
-// textarea {
-//   height: 80px;
-// }
 .btn {
-  // width: 10em;
   height: 3em;
   letter-spacing: 0.1em;
   border: 1px solid transparent;
   background-color: #081b33;
   color: white;
+}
+.line {
+  border: 1px solid;
+  width: 0px;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 700px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .left {
+    grid-template-rows: 1fr 1px 1fr;
+    grid-template-columns: unset;
+    text-align: center;
+  }
+  .line {
+    width: unset;
+    height: 0;
+  }
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
 }
 </style>
