@@ -18,7 +18,7 @@
             of over 1000 products.
           </p>
         </div>
-        <div class="Hline"></div>
+        <div class="line"></div>
         <div class="right">
           <div class="icon">
             <i class="material-icons">assignment_late</i>
@@ -79,6 +79,30 @@ export default {
   }
   i {
     font-size: 3.5em;
+  }
+}
+.line {
+  border: 1px solid;
+  height: 0px;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 650px) {
+  .content {
+    grid-template-columns: 1.3fr 1px 1fr;
+    grid-template-rows: 1fr;
+  }
+  .right {
+    flex-direction: column;
+    .icon {
+      flex-direction: row;
+      * {
+        padding-right: 10px;
+      }
+    }
+  }
+  .line {
+    width: 0px;
+    height: unset;
   }
 }
 </style>
