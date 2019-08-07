@@ -73,4 +73,14 @@ export default {
   // height: 100%;
   grid-gap: 5px;
 }
+@media only screen and (min-width: 500px) {
+  .content {
+    grid-gap: 10px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .content {
+    grid-gap: 20px;
+  }
+}
 </style>
