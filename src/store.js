@@ -105,7 +105,7 @@ export default new Vuex.Store({
                     ]
                 },
                 Headset: {
-                    "Headphones/Earphones": ["Logitech", "HP", "IBall"],
+                    "Headphones / Earphones": ["Logitech", "HP", "IBall"],
                     Webcams: ["Logitech"]
                 },
                 TFT: [

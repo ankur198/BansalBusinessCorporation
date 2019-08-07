@@ -43,7 +43,7 @@ h2 {
   display: grid;
   grid-template-rows: 3fr 10fr 3fr;
   height: 100%;
-  font-size: 2em;
+  font-size: 3em;
   font-family: serif;
 
   .mainheading {
@@ -75,7 +75,7 @@ h2 {
     }
   }
 }
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: 500px) {
   .page {
     .mainheading {
       font-size: 0.4em;

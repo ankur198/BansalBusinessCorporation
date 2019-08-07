@@ -7,14 +7,11 @@
         <div>
           <ProductsList :products="products" @itemSelected="setSubCategory" />
         </div>
-        <div class="line"></div>
+        <div class="Vline"></div>
         <div>
-          <ProductsList
-            :products="subcategory"
-            @itemSelected="setSubSubCategory"
-          />
+          <ProductsList :products="subcategory" @itemSelected="setSubSubCategory" />
         </div>
-        <div v-if="isSubSubCategory()" class="line"></div>
+        <div v-if="isSubSubCategory()" class="Vline"></div>
         <div>
           <ProductsList :products="subsubcategory" />
         </div>
@@ -66,13 +63,14 @@ export default {
 .page {
   display: grid;
   grid-template-rows: auto 1fr;
+  align-items: center;
 }
 .content {
-  align-self: center;
+  // align-self: center;
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
   text-align: left;
   height: 100%;
-  grid-gap: 20px;
+  grid-gap: 5px;
 }
 </style>

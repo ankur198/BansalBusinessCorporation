@@ -3,20 +3,15 @@
     <full-page ref="fullpage" :options="options" id="fullpage">
       <LandingPage class="section" id="topPage" />
       <About class="section" id="aboutPage" />
-      <Products
-        :products="products[0]"
-        heading="products"
-        class="section black"
-        id="productsPage"
-      />
+      <Products :products="products[0]" heading="products" class="section black" id="productsPage" />
       <Products
         :products="products[1]"
         heading="we got more products"
         class="section"
         id="productsPage2"
       />
-      <Partners class="section black" id="partnersPage" />
-      <Contact class="section" id="contactPage" />
+      <!-- <Partners class="section black" id="partnersPage" /> -->
+      <!-- <Contact class="section" id="contactPage" /> -->
     </full-page>
   </div>
 </template>
@@ -74,22 +69,27 @@ $WeblySleek: "weblysleekuisb";
 .section {
   font-family: $WeblySleek;
   color: black;
-  font-size: 1.3em;
+  font-size: 0.8em; //Bhoooooooo
 }
 .fp-tableCell {
   display: grid;
   align-items: center;
 }
 .content {
-  padding-left: 100px;
+  // padding-left: 100px;
+  padding: 30px;
+  padding-left: 15px;
 }
 .mainheading {
   font-family: $WeblySleek;
-  font-size: 4.5rem;
+  font-size: 2.5rem; //Bhoooooooo
   margin: 0;
   text-align: left;
-  padding: 50px;
-  margin: 10px 0 10px;
+  padding: 30px;
+  padding-bottom: 0;
+  padding-top: 60px;
+  margin: 10px 0 0px; //Bhooooooooooooooooooo
+  padding-left: 15px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -97,7 +97,13 @@ $WeblySleek: "weblysleekuisb";
   color: white !important;
   background-color: black !important;
 }
-.line {
+.Hline {
+  border: 1px solid;
+  // width: 0px;
+  height: 0px;
+  border-radius: 50%;
+}
+.Vline {
   border: 1px solid;
   width: 0px;
   border-radius: 50%;
