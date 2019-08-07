@@ -52,15 +52,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Slab&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Slab&display=swap");
 @font-face {
   font-family: weblysleekuisb;
   src: url(../../public/weblysleekuisb.ttf);
 }
-$Montserrat: "Montserrat", sans-serif;
-$Roboto: "Roboto", sans-serif;
-$RobotoSlab: "Roboto Slab", serif;
+// $Montserrat: "Montserrat", sans-serif;
+// $Roboto: "Roboto", sans-serif;
+// $RobotoSlab: "Roboto Slab", serif;
 $WeblySleek: "weblysleekuisb";
 
 .section {
@@ -73,19 +73,18 @@ $WeblySleek: "weblysleekuisb";
   align-items: center;
 }
 .content {
-  // padding-left: 100px;
   padding: 30px;
   padding-left: 15px;
 }
 .mainheading {
   font-family: $WeblySleek;
-  font-size: 2.5rem; //Bhoooooooo
+  font-size: 2.5rem;
   margin: 0;
   text-align: left;
   padding: 30px;
   padding-bottom: 0;
   padding-top: 60px;
-  margin: 10px 0 0px; //Bhooooooooooooooooooo
+  margin: 10px 0 0px;
   padding-left: 15px;
   font-weight: 500;
   text-transform: uppercase;
@@ -96,7 +95,6 @@ $WeblySleek: "weblysleekuisb";
 }
 .Hline {
   border: 1px solid;
-  // width: 0px;
   height: 0px;
   border-radius: 50%;
 }
@@ -108,11 +106,30 @@ $WeblySleek: "weblysleekuisb";
 @media only screen and (min-width: 500px) {
   .section {
     font-size: 1em;
+    .mainheading {
+      margin: 10px 0 10px;
+      padding-left: 20px;
+    }
+    .content {
+      padding-left: 50px;
+    }
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   .section {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    .mainheading {
+      margin: 10px 0 10px;
+      padding-left: 30px;
+    }
+    .content {
+      padding-left: 100px;
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .section {
+    font-size: 1.3em;
   }
 }
 </style>
