@@ -3,7 +3,12 @@
     <full-page ref="fullpage" :options="options" id="fullpage">
       <LandingPage class="section" id="topPage" />
       <About class="section" id="aboutPage" />
-      <Products :products="products[0]" heading="products" class="section black" id="productsPage" />
+      <Products
+        :products="products[0]"
+        heading="products"
+        class="section black"
+        id="productsPage"
+      />
       <Products
         :products="products[1]"
         heading="we got more products"
@@ -63,6 +68,15 @@ export default {
 // $RobotoSlab: "Roboto Slab", serif;
 $WeblySleek: "weblysleekuisb";
 
+.page {
+  display: grid;
+  grid-template-rows: 1fr 4fr !important;
+  align-items: center;
+  .content {
+    align-self: flex-start;
+  }
+}
+
 .section {
   font-family: $WeblySleek;
   color: black;
@@ -82,7 +96,7 @@ $WeblySleek: "weblysleekuisb";
   margin: 0;
   text-align: left;
   padding: 30px;
-  padding-bottom: 0;
+  // padding-bottom: 0;
   padding-top: 60px;
   margin: 10px 0 0px;
   padding-left: 15px;
@@ -109,6 +123,7 @@ $WeblySleek: "weblysleekuisb";
     .mainheading {
       margin: 10px 0 10px;
       padding-left: 20px;
+      padding-top: 0;
     }
     .content {
       padding-left: 50px;

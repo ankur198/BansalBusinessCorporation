@@ -5,6 +5,7 @@
         v-for="(name, index) in getProductsName()"
         :key="index"
         @click="itemSelected(name)"
+        @mouseover="itemSelected(name)"
       >
         {{ name }}
       </li>

@@ -8,7 +8,7 @@
           autoplay
           :speed="1000"
           :pauseOnHover="false"
-          :slide-ratio="1 /3"
+          :slide-ratio="1 / 3"
           :visible-slides="3"
           :arrows="false"
           :dragging-distance="70"
@@ -39,11 +39,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: center;
-}
 .content {
   display: grid;
 }

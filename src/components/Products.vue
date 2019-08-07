@@ -9,7 +9,10 @@
         </div>
         <div class="Vline"></div>
         <div>
-          <ProductsList :products="subcategory" @itemSelected="setSubSubCategory" />
+          <ProductsList
+            :products="subcategory"
+            @itemSelected="setSubSubCategory"
+          />
         </div>
         <div v-if="isSubSubCategory()" class="Vline"></div>
         <div>
@@ -60,13 +63,7 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: center;
-}
 .content {
-  // align-self: center;
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
   text-align: left;
