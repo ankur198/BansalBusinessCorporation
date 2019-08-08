@@ -6,9 +6,10 @@
       </div>
       <div class="backdrop">
         <h1>
-          FOR ALL YOUR <br />
-          COMPUTER <br />HARDWARE<br />
-          NEEDS
+          FOR ALL YOUR
+          <br />COMPUTER
+          <br />HARDWARE
+          <br />NEEDS
         </h1>
       </div>
     </div>
@@ -40,19 +41,20 @@ h2 {
 }
 .page {
   display: grid;
-  grid-template-rows: 3fr 7fr 1fr;
+  grid-template-rows: 3fr 10fr 3fr;
   height: 100%;
-  font-size: 2em;
+  font-size: 3em;
   font-family: serif;
 
   .mainheading {
     font-family: "Candara";
     text-align: center;
-    font-size: 0.4em;
+    font-size: 0.3em;
     padding: 0;
     display: flex;
     margin: 0;
-    align-items: flex-start;
+    align-self: flex-end;
+    align-items: flex-end;
     justify-content: center;
     :hover {
       color: #e54a36;
@@ -62,18 +64,36 @@ h2 {
   .backdrop {
     background-color: rgb(6, 26, 49);
     display: flex;
-    // padding-top: 110px;
     align-items: center;
     justify-content: center;
-    // margin-bottom: 50px;
 
     h1 {
-      // padding: 50px;
       font-weight: 400;
-      font-size: 70px;
+      font-size: 1em;
       letter-spacing: 0.01em;
       line-height: 1em;
       color: #f2f2f2;
+    }
+  }
+}
+@media only screen and (min-width: 500px) {
+  .page {
+    .mainheading {
+      font-size: 0.4em;
+    }
+    .backdrop {
+      h1 {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 850px) {
+  .page {
+    .backdrop {
+      h1 {
+        font-size: 1.3em;
+      }
     }
   }
 }

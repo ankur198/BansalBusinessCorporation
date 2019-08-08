@@ -7,14 +7,14 @@
         <div>
           <ProductsList :products="products" @itemSelected="setSubCategory" />
         </div>
-        <div class="line"></div>
+        <div class="Vline"></div>
         <div>
           <ProductsList
             :products="subcategory"
             @itemSelected="setSubSubCategory"
           />
         </div>
-        <div v-if="isSubSubCategory()" class="line"></div>
+        <div v-if="isSubSubCategory()" class="Vline"></div>
         <div>
           <ProductsList :products="subsubcategory" />
         </div>
@@ -63,16 +63,21 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
 .content {
-  align-self: center;
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
   text-align: left;
-  height: 100%;
-  grid-gap: 20px;
+  // height: 100%;
+  grid-gap: 5px;
+}
+@media only screen and (min-width: 500px) {
+  .content {
+    grid-gap: 10px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .content {
+    grid-gap: 20px;
+  }
 }
 </style>

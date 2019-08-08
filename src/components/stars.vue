@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="stars">
     <div id="stars-group-1"></div>
     <div id="stars-group-2"></div>
     <div id="stars-group-3"></div>
@@ -17,6 +17,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.stars {
+  position: absolute;
+}
+
 @function generate-random-stars($screen-width, $color, $density) {
   $h-shadow: random($screen-width);
   $v-shadow: random($screen-width);

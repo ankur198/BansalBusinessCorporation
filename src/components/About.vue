@@ -20,13 +20,15 @@
         </div>
         <div class="line"></div>
         <div class="right">
-          <div>
+          <div class="icon">
             <i class="material-icons">assignment_late</i>
+            <p>200</p>
+            <h4>Partens</h4>
           </div>
-          <div>
+          <div class="icon">
             <i class="material-icons">check_circle_outline</i>
           </div>
-          <div>
+          <div class="icon">
             <i class="material-icons">dashboard</i>
           </div>
         </div>
@@ -48,8 +50,8 @@ export default {
 }
 .content {
   display: grid;
-  grid-template-columns: 1.3fr 1px 1fr;
-  grid-gap: 40px;
+  grid-template-rows: 1.3fr 1px 1fr;
+  grid-gap: 20px;
   text-align: left;
 }
 .left {
@@ -63,10 +65,44 @@ export default {
 }
 .right {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h4 {
+    margin: 0;
+  }
+  i {
+    font-size: 3.5em;
+  }
 }
-.right i {
-  font-size: 3.5em;
+.line {
+  border: 1px solid;
+  height: 0px;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 650px) {
+  .content {
+    grid-template-columns: 1.3fr 1px 1fr;
+    grid-template-rows: 1fr;
+  }
+  .right {
+    flex-direction: column;
+    .icon {
+      flex-direction: row;
+      * {
+        padding-right: 10px;
+      }
+    }
+  }
+  .line {
+    width: 0px;
+    height: unset;
+  }
 }
 </style>
