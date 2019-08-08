@@ -4,7 +4,7 @@
     <div class="page">
       <h1 class="mainheading">our proud partners</h1>
       <div class="content">
-        <vueper-slides
+        <!-- <vueper-slides
           fade
           autoplay
           :speed="1000"
@@ -21,52 +21,45 @@
             :key="i"
             :image="`/img/brands/tinified/${brand}`"
           ></vueper-slide>
-        </vueper-slides>
+        </vueper-slides> -->
+        <carousel
+          class="slides"
+          :autoplay="true"
+          :autoplayTimeout="1000"
+          :nav="false"
+          :items="3"
+          :dots="false"
+          :autoheight="true"
+          :autowidth="true"
+          :loop="true"
+          :center="true"
+        >
+          <img
+            :src="`/img/brands/tinified/${brand}`"
+            v-for="(brand, i) in internal.images"
+            :key="i"
+          />
+        </carousel>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import carousel from "vue-owl-carousel";
 import { mapState } from "vuex";
 import Stars from "./stars";
 export default {
   name: "partners",
   computed: mapState(["internal"]),
-  components: { Stars }
+  components: { Stars, carousel }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.content {
-  display: grid;
-}
-
-.vueperslides__bullets--outside {
-  display: none;
-}
-
-.vueperslide {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  // margin: 20px;
-  z-index: -1;
-  // border-radius: 500px;
-  // height: 500px;
-
-  &__content-wrapper {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // font-family: Tahoma, Geneva, sans-serif;
-  }
-
-  &__title {
-    // font-size: 7em;
-    opacity: 0.6;
-    color: #fff;
-  }
+.content,
+.slides {
+  overflow: hidden;
 }
 </style>
