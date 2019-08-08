@@ -5,6 +5,7 @@
       <h1 class="mainheading">our proud partners</h1>
       <div class="content">
         <vueper-slides
+          fade
           autoplay
           :speed="1000"
           :pauseOnHover="false"
@@ -13,6 +14,7 @@
           :arrows="false"
           :dragging-distance="70"
           :touchable="false"
+          :infinite="true"
         >
           <vueper-slide
             v-for="(brand, i) in internal.images"
@@ -26,14 +28,12 @@
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from "vueperslides";
-import "vueperslides/dist/vueperslides.css";
 import { mapState } from "vuex";
 import Stars from "./stars";
 export default {
   name: "partners",
   computed: mapState(["internal"]),
-  components: { VueperSlides, VueperSlide, Stars }
+  components: { Stars }
 };
 </script>
 

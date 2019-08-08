@@ -15,7 +15,7 @@ export default new Vuex.Store({
                 "epson.png",
                 "honeywell.png",
                 "hp.png",
-                "iball.png",
+
                 "intex.png",
                 "kodak.png",
                 "logitech.png",
@@ -27,8 +27,7 @@ export default new Vuex.Store({
                 "sharp.png",
                 "tvs.png",
                 "xerox.png",
-                "zebra.png",
-                "apc.png"
+                "zebra.png"
             ]
         },
         brandName: "Bansal Business Corporation",

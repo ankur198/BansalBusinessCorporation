@@ -72,6 +72,23 @@ $WeblySleek: "weblysleekuisb";
   display: grid;
   grid-template-rows: 1fr 4fr !important;
   align-items: center;
+  height: 100%;
+
+  .mainheading {
+    font-family: $WeblySleek;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: left;
+    padding: 30px;
+    // padding-bottom: 0;
+    padding-top: 60px;
+    margin: 10px 0 0px;
+    padding-left: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    align-self: flex-end;
+  }
+
   .content {
     align-self: flex-start;
   }
@@ -90,19 +107,7 @@ $WeblySleek: "weblysleekuisb";
   padding: 30px;
   padding-left: 15px;
 }
-.mainheading {
-  font-family: $WeblySleek;
-  font-size: 2.5rem;
-  margin: 0;
-  text-align: left;
-  padding: 30px;
-  // padding-bottom: 0;
-  padding-top: 60px;
-  margin: 10px 0 0px;
-  padding-left: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
+
 .black {
   color: white !important;
   background-color: black !important;
@@ -120,13 +125,17 @@ $WeblySleek: "weblysleekuisb";
 @media only screen and (min-width: 500px) {
   .section {
     font-size: 1em;
-    .mainheading {
-      margin: 10px 0 10px;
-      padding-left: 20px;
-      padding-top: 0;
-    }
-    .content {
-      padding-left: 50px;
+    .page {
+      grid-template-rows: 2fr 4fr !important;
+
+      .mainheading {
+        margin: 10px 0 10px;
+        padding-left: 20px;
+        padding-top: 0;
+      }
+      .content {
+        padding-left: 50px;
+      }
     }
   }
 }
