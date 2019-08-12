@@ -2,11 +2,13 @@
   <div class="navbar">
     <div class="mobile title">
       <div class="left">
-        <i class="material-icons">
+        <i class="material-icons" @click="showMenu">
           reorder
         </i>
       </div>
-      <p v-if="internal.onTop == false">{{ brandName }}</p>
+      <p v-if="internal.onTop == false" v-scroll-to="'#topPage'">
+        {{ brandName }}
+      </p>
     </div>
     <div class="desktop">
       <div class="left">
@@ -14,10 +16,26 @@
         <a href="#" v-scroll-to="'#topPage'" v-else>{{ brandName }}</a>
       </div>
       <div class="right">
-        <a href="#" v-scroll-to="'#aboutPage'" id="about">about</a>
-        <a href="#" v-scroll-to="'#productsPage'" id="products">products</a>
-        <a href="#" v-scroll-to="'#partnersPage'" id="partners">partners</a>
-        <a href="#" v-scroll-to="'#contactPage'" id="contact">contact</a>
+        <a href="#" v-scroll-to="'#aboutPage'" id="about" @click="closeMenu"
+          >about</a
+        >
+        <a
+          href="#"
+          v-scroll-to="'#productsPage'"
+          id="products"
+          @click="closeMenu"
+          >products</a
+        >
+        <a
+          href="#"
+          v-scroll-to="'#partnersPage'"
+          id="partners"
+          @click="closeMenu"
+          >partners</a
+        >
+        <a href="#" v-scroll-to="'#contactPage'" id="contact" @click="closeMenu"
+          >contact</a
+        >
       </div>
     </div>
   </div>
@@ -31,6 +49,30 @@ export default {
   props: ["onTop"],
   computed: {
     ...mapState(["brandName", "contact", "internal"])
+  },
+  methods: {
+    showMenu() {
+      let menu = document.querySelector(".desktop");
+      let title = document.querySelector(".title");
+      if (menu.style.display == "flex") {
+        menu.style.display = "";
+        menu.classList.remove("dark");
+        title.classList.remove("dark");
+      } else {
+        menu.style.display = "flex";
+        menu.classList.add("dark");
+        title.classList.add("dark");
+      }
+    },
+    closeMenu() {
+      let menu = document.querySelector(".desktop");
+      let title = document.querySelector(".title");
+      if (menu.style.display == "flex") {
+        menu.style.display = "";
+        menu.classList.remove("dark");
+        title.classList.remove("dark");
+      }
+    }
   }
 };
 </script>
@@ -62,18 +104,25 @@ export default {
   .desktop {
     display: none;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
     padding-top: 10px;
+    height: 100vh;
+    z-index: 4000;
 
     .left {
       font-size: 1em;
+      display: none;
     }
 
     .right {
       display: flex;
       justify-content: space-evenly;
       font-size: 0.9em;
+      flex-direction: column;
+      align-content: space-between;
+      height: 50%;
     }
 
     .right :hover {
@@ -88,6 +137,9 @@ export default {
     }
   }
 }
+.dark {
+  background: rgba(0, 0, 0, 0.952);
+}
 
 @media only screen and (min-width: 640px) {
   .navbar {
@@ -96,6 +148,16 @@ export default {
     }
     .desktop {
       display: flex;
+      flex-direction: row;
+      height: unset;
+      background: unset;
+
+      .left {
+        display: block;
+      }
+      .right {
+        flex-direction: row;
+      }
     }
   }
 }

@@ -7,9 +7,7 @@
       <div class="backdrop">
         <h1>
           FOR ALL YOUR
-          <br />COMPUTER
-          <br />HARDWARE
-          <br />NEEDS
+          <br />COMPUTER <br />HARDWARE <br />NEEDS
         </h1>
       </div>
     </div>
@@ -34,7 +32,7 @@ export default {
 <style scoped lang="scss">
 h2 {
   transition-duration: 0.5s;
-  z-index: 5001;
+  z-index: 5000;
   &:hover {
     color: #e54a36;
   }
