@@ -4,24 +4,6 @@
     <div class="page">
       <h1 class="mainheading">our proud partners</h1>
       <div class="content">
-        <!-- <vueper-slides
-          fade
-          autoplay
-          :speed="1000"
-          :pauseOnHover="false"
-          :slide-ratio="1 / 3"
-          :visible-slides="3"
-          :arrows="false"
-          :dragging-distance="70"
-          :touchable="false"
-          :infinite="true"
-        >
-          <vueper-slide
-            v-for="(brand, i) in internal.images"
-            :key="i"
-            :image="`/img/brands/tinified/${brand}`"
-          ></vueper-slide>
-        </vueper-slides> -->
         <carousel
           class="slides"
           :autoplay="true"
@@ -57,7 +39,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
+<style scoped lang="scss">
+.section .page {
+  grid-template-rows: 2fr 4fr !important;
+}
+</style>
+
+<style>
 .content,
 .slides {
   overflow: hidden;

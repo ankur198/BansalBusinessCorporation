@@ -70,7 +70,7 @@ $WeblySleek: "weblysleekuisb";
 
 .page {
   display: grid;
-  grid-template-rows: 1fr 4fr !important;
+  grid-template-rows: 1fr 4fr;
   align-items: center;
   height: 100%;
 
@@ -126,12 +126,13 @@ $WeblySleek: "weblysleekuisb";
   .section {
     font-size: 1em;
     .page {
-      grid-template-rows: 2fr 4fr !important;
+      grid-template-rows: 1fr 4fr;
 
       .mainheading {
         margin: 10px 0 10px;
         padding-left: 20px;
         padding-top: 0;
+        padding-bottom: 0;
       }
       .content {
         padding-left: 50px;

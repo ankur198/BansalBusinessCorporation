@@ -63,6 +63,10 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 
+.section .page {
+  grid-template-rows: 2fr 4fr !important;
+}
+
 .content {
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr;
