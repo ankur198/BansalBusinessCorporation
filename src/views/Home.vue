@@ -9,12 +9,7 @@
         class="section black"
         id="productsPage"
       />
-      <Products
-        :products="products[1]"
-        heading="we got more products"
-        class="section"
-        id="productsPage2"
-      />
+      <Products :products="products[1]" class="section" id="productsPage2" />
       <Partners class="section black" id="partnersPage" />
       <Contact class="section" id="contactPage" />
     </full-page>
@@ -70,13 +65,13 @@ $WeblySleek: "weblysleekuisb";
 
 .page {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  // grid-template-rows: 1fr 4fr;
   align-items: center;
   height: 100%;
 
   .mainheading {
-    font-family: $WeblySleek;
-    font-size: 2.5rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 3rem;
     margin: 0;
     text-align: left;
     padding: 30px;
@@ -84,7 +79,7 @@ $WeblySleek: "weblysleekuisb";
     padding-top: 60px;
     margin: 10px 0 0px;
     padding-left: 15px;
-    font-weight: 500;
+    font-weight: 900;
     text-transform: uppercase;
     align-self: flex-end;
   }
@@ -126,11 +121,9 @@ $WeblySleek: "weblysleekuisb";
   .section {
     font-size: 1em;
     .page {
-      grid-template-rows: 1fr 4fr;
-
       .mainheading {
         margin: 10px 0 10px;
-        padding-left: 20px;
+        padding-left: 30px;
         padding-top: 0;
         padding-bottom: 0;
       }
@@ -143,18 +136,29 @@ $WeblySleek: "weblysleekuisb";
 @media only screen and (min-width: 700px) {
   .section {
     font-size: 1.1em;
-    .mainheading {
-      margin: 10px 0 10px;
-      padding-left: 30px;
-    }
-    .content {
-      padding-left: 100px;
+    .page {
+      .mainheading {
+        margin: 10px 0 10px;
+        padding-left: 40px;
+      }
+      .content {
+        padding-left: 100px;
+      }
     }
   }
 }
 @media only screen and (min-width: 1000px) {
   .section {
     font-size: 1.3em;
+    .page {
+      .mainheading {
+        padding-left: 50px;
+        padding-bottom: 50px;
+      }
+      .content {
+        padding: 0 150px;
+      }
+    }
   }
 }
 </style>
