@@ -81,13 +81,15 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 .navbar {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  // color: rgb(229, 74, 53);
   color: rgb(229, 74, 53);
   font-family: "PT Sans Narrow", sans-serif;
   position: fixed;
   width: 100%;
   z-index: 5000;
-
+  text-transform: capitalize;
+  font-weight: bold;
   .mobile {
     display: flex;
     align-items: center;

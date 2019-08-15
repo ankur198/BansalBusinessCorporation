@@ -1,14 +1,22 @@
 <template>
   <div class="landingPage">
     <div class="page">
-      <div class="mainheading">
-        <h2>bansal business corporation</h2>
-      </div>
-      <div class="backdrop">
-        <h1>
-          FOR ALL YOUR
-          <br />COMPUTER <br />HARDWARE <br />NEEDS
-        </h1>
+      <div></div>
+      <div class="content">
+        <div class="mainheading">
+          <h2>
+            bansal <br />
+            business <br />
+            corporation
+          </h2>
+        </div>
+        <div class="Vline"></div>
+        <div class="backdrop">
+          <h1>
+            For All Your <br />
+            Computer Hardware Needs.
+          </h1>
+        </div>
       </div>
     </div>
   </div>
@@ -39,49 +47,67 @@ h2 {
 }
 .page {
   display: grid;
-  grid-template-rows: 3fr 10fr 3fr;
+  grid-template-rows: 2fr 4fr 1fr !important;
   height: 100%;
   font-size: 3em;
   font-family: serif;
+  // font-family: "Candara";
+  background: black;
 
-  .mainheading {
-    font-family: "Candara";
-    text-align: center;
-    font-size: 0.3em;
+  .content {
+    background: white;
+    display: grid;
     padding: 0;
-    display: flex;
-    margin: 0;
-    align-self: flex-end;
-    align-items: flex-end;
-    justify-content: center;
-    :hover {
-      color: #e54a36;
+    grid-template-columns: 1fr 1px 1fr;
+    padding: 20px;
+
+    .mainheading {
+      // font-family: "Candara";
+      font-family: serif;
+
+      text-align: left;
+
+      padding: 0;
+
+      display: flex;
+      margin: 0;
+      align-self: center;
+      // align-items: flex-end;
+      justify-content: center;
+      text-transform: capitalize;
+
+      h2 {
+        font-size: 3.5em;
+      }
     }
-  }
 
-  .backdrop {
-    background-color: rgb(6, 26, 49);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-      font-weight: 400;
-      font-size: 1em;
-      letter-spacing: 0.01em;
-      line-height: 1em;
-      color: #f2f2f2;
+    .backdrop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        text-transform: capitalize;
+        margin: 20px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 1em;
+        letter-spacing: 0.01em;
+      }
     }
   }
 }
 @media only screen and (min-width: 500px) {
   .page {
-    .mainheading {
-      font-size: 0.4em;
-    }
-    .backdrop {
-      h1 {
-        font-size: 1.2em;
+    .content {
+      padding-left: 0 !important;
+      .mainheading {
+        font-size: 0.3em;
+      }
+      .backdrop {
+        h1 {
+          padding-left: 50px;
+          font-size: 1em;
+        }
       }
     }
   }
@@ -90,7 +116,7 @@ h2 {
   .page {
     .backdrop {
       h1 {
-        font-size: 1.3em;
+        font-size: 1em;
       }
     }
   }
