@@ -22,14 +22,18 @@
         <div class="right">
           <div class="icon">
             <i class="material-icons">assignment_late</i>
-            <p>200</p>
-            <h4>Partens</h4>
+            <p>1000+</p>
+            <h4>Partners</h4>
           </div>
           <div class="icon">
             <i class="material-icons">check_circle_outline</i>
+            <p>700+</p>
+            <h4>Products</h4>
           </div>
           <div class="icon">
             <i class="material-icons">dashboard</i>
+            <p>20+</p>
+            <h4>Years of trust</h4>
           </div>
         </div>
       </div>

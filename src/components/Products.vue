@@ -24,12 +24,17 @@
           <ProductsList :products="subsubcategory" />
         </div>
       </div>
-      <div v-if="isMore" class="moreItems">
+      <a
+        href="#"
+        v-scroll-to="'#productsPage2'"
+        v-if="isMore"
+        class="moreItems"
+      >
         We got more products
         <i class="material-icons">
           keyboard_arrow_down
         </i>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -99,6 +104,8 @@ export default {
   }
 
   .moreItems {
+    color: white;
+    text-decoration: none;
     margin-right: 30px;
     display: flex;
     align-items: center;

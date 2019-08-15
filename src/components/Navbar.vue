@@ -116,6 +116,11 @@ export default {
     .left {
       font-size: 1em;
       display: none;
+
+      a:hover {
+        transition-duration: 0.3s;
+        color: darkgray;
+      }
     }
 
     .right {

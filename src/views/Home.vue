@@ -5,13 +5,14 @@
       <About class="section" id="aboutPage" />
       <Products
         :products="products[0]"
+        :isMore="true"
         heading="products"
         class="section black"
         id="productsPage"
       />
       <Products :products="products[1]" class="section" id="productsPage2" />
       <Partners class="section black" id="partnersPage" />
-      <Contact class="section" id="contactPage" />
+      <!-- <Contact class="section" id="contactPage" /> -->
     </full-page>
   </div>
 </template>
@@ -74,8 +75,6 @@ $WeblySleek: "weblysleekuisb";
     font-size: 3rem;
     margin: 0;
     text-align: left;
-    padding: 30px;
-    // padding-bottom: 0;
     padding-top: 60px;
     margin: 10px 0 0px;
     padding-left: 15px;
@@ -86,6 +85,10 @@ $WeblySleek: "weblysleekuisb";
 
   .content {
     align-self: flex-start;
+    padding: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
   }
 }
 
@@ -97,10 +100,6 @@ $WeblySleek: "weblysleekuisb";
 .fp-tableCell {
   display: grid;
   align-items: center;
-}
-.content {
-  padding: 30px;
-  padding-left: 15px;
 }
 
 .black {
@@ -123,6 +122,7 @@ $WeblySleek: "weblysleekuisb";
     .page {
       .mainheading {
         margin: 10px 0 10px;
+        padding: 30px;
         padding-left: 30px;
         padding-top: 0;
         padding-bottom: 0;

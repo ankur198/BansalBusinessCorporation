@@ -4,6 +4,7 @@
       <li
         v-for="(name, index) in getProductsName()"
         :key="index"
+        :class="{ selected: isSelected(name) }"
         @click="itemSelected(name)"
         @mouseover="itemSelected(name)"
       >
@@ -16,7 +17,11 @@
 <script>
 export default {
   name: "productsList",
-  props: ["products"],
+  props: ["products", "selectedItem"],
+
+  mounted: function() {
+    this.itemSelected(Object.keys(this.products)[0]);
+  },
   methods: {
     getProductsName: function() {
       if (this.products == null) {
@@ -24,13 +29,18 @@ export default {
       }
       if (Array.isArray(this.products)) {
         return this.products;
+      } else {
+        return Object.keys(this.products);
       }
-      return Object.keys(this.products);
     },
     itemSelected: function(key) {
       if (this.products[key]) {
-        this.$emit("itemSelected", this.products[key]);
+        this.$emit("itemSelected", this.products[key], key);
+        // this.selectedItem = key;
       }
+    },
+    isSelected: function(name) {
+      return this.selectedItem === name;
     }
   }
 };
@@ -38,6 +48,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.selected {
+  color: #e54a35;
+}
+
 .productsList {
   display: flex;
   align-items: center;

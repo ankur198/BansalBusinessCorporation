@@ -2,7 +2,7 @@
   <div class="partners">
     <Stars />
     <div class="page">
-      <h1 class="mainheading">our proud partners</h1>
+      <div></div>
       <div class="content">
         <carousel
           class="slides"
@@ -23,6 +23,7 @@
           />
         </carousel>
       </div>
+      <h1 class="mainheading">partners</h1>
     </div>
   </div>
 </template>
@@ -41,7 +42,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .section .page {
-  grid-template-rows: 2fr 4fr !important;
+  grid-template-rows: 1fr 1.2fr 1.3fr;
+
+  .mainheading {
+    align-self: flex-start;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .content {
+    padding: 0;
+  }
 }
 </style>
 

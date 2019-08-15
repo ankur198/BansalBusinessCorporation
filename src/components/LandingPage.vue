@@ -1,5 +1,6 @@
 <template>
   <div class="landingPage">
+    <Stars />
     <div class="page">
       <div></div>
       <div class="content">
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import Stars from "./../components/stars";
 import { mapState } from "vuex";
 
 export default {
@@ -32,19 +34,13 @@ export default {
   },
   computed: {
     ...mapState(["brandName"])
-  }
+  },
+  components: { Stars }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h2 {
-  transition-duration: 0.5s;
-  z-index: 5000;
-  &:hover {
-    color: #e54a36;
-  }
-}
 .page {
   display: grid;
   grid-template-rows: 2fr 4fr 1fr !important;
@@ -77,7 +73,13 @@ h2 {
       text-transform: capitalize;
 
       h2 {
+        margin: 0.5em;
         font-size: 3.5em;
+        transition-duration: 0.5s;
+        z-index: 5000;
+        &:hover {
+          color: #e54a36;
+        }
       }
     }
 
