@@ -5,12 +5,17 @@
       <h1 class="mainheading">{{ heading }}</h1>
       <div class="content">
         <div>
-          <ProductsList :products="products" @itemSelected="setSubCategory" />
+          <ProductsList
+            :products="products"
+            :selectedItem="categorySelected"
+            @itemSelected="setSubCategory"
+          />
         </div>
         <div class="Vline"></div>
         <div>
           <ProductsList
             :products="subcategory"
+            :selectedItem="subcategorySelected"
             @itemSelected="setSubSubCategory"
           />
         </div>
@@ -18,6 +23,12 @@
         <div>
           <ProductsList :products="subsubcategory" />
         </div>
+      </div>
+      <div v-if="isMore" class="moreItems">
+        We got more products
+        <i class="material-icons">
+          keyboard_arrow_down
+        </i>
       </div>
     </div>
   </div>
@@ -28,25 +39,31 @@ import ProductsList from "./Products-List.vue";
 import Stars from "./stars";
 export default {
   name: "products",
-  props: ["products", "heading"],
+  props: ["products", "heading", "isMore"],
   data: function() {
     return {
+      categorySelected: "",
+      subcategorySelected: "",
       subcategory: [],
       subsubcategory: []
     };
   },
   methods: {
-    setSubCategory: function(data) {
+    setSubCategory: function(data, key) {
       this.subcategory = data;
       if (Array.isArray(data)) {
         this.subsubcategory = [];
       } else {
         const fk = Object.keys(data)[0];
         this.subsubcategory = data[fk];
+
+        this.subcategorySelected = fk;
       }
+      this.categorySelected = key;
     },
-    setSubSubCategory: function(data) {
+    setSubSubCategory: function(data, key) {
       this.subsubcategory = data;
+      this.subcategorySelected = key;
     },
     isSubSubCategory: function() {
       return this.subsubcategory.length > 0;
@@ -63,8 +80,39 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 
+@keyframes smoothBounce {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
 .section .page {
-  grid-template-rows: 2fr 4fr !important;
+  grid-template-rows: 2fr 3.5fr 0.5fr;
+
+  .mainheading {
+    color: rgb(255, 200, 200);
+    padding-bottom: 70px;
+    padding-left: 40px;
+  }
+
+  .moreItems {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: end;
+
+    i {
+      padding-top: 5px;
+      animation-name: smoothBounce;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
 }
 
 .content {
