@@ -21,17 +21,17 @@
         <div class="line"></div>
         <div class="right">
           <div class="icon">
-            <i class="material-icons">assignment_late</i>
+            <i class="material-icons">group</i>
             <IOdometer class="iOdometer" :value="num1" />
             <h4>Partners</h4>
           </div>
           <div class="icon">
-            <i class="material-icons">check_circle_outline</i>
+            <i class="material-icons">devices_other</i>
             <IOdometer class="iOdometer" :value="num2" />
             <h4>Products</h4>
           </div>
           <div class="icon">
-            <i class="material-icons">dashboard</i>
+            <i class="material-icons">sentiment_satisfied_alt</i>
             <IOdometer class="iOdometer" :value="num3" />
             <h4>Years of trust</h4>
           </div>
@@ -95,6 +95,7 @@ export default {
   grid-template-rows: 1.3fr 1px 1fr;
   grid-gap: 20px;
   text-align: left;
+  padding-right: 10px !important;
 }
 .left {
   display: flex;
@@ -115,8 +116,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 800;
+  }
+  .icon > * {
+    padding: 5px 10px;
   }
   h4 {
     margin: 0;
@@ -130,7 +134,7 @@ export default {
   height: 0px;
   border-radius: 50%;
 }
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 950px) {
   .content {
     grid-template-columns: 1.3fr 1px 1fr;
     grid-template-rows: 1fr;
