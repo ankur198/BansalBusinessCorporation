@@ -2,6 +2,7 @@
   <div class="products">
     <Stars />
     <div class="page">
+      <div></div>
       <h1 class="mainheading">{{ heading }}</h1>
       <div class="content">
         <div>
@@ -105,7 +106,7 @@ export default {
 }
 
 .section .page {
-  grid-template-rows: 3fr 5fr 1fr;
+  grid-template-rows: 1fr auto 5fr 1fr;
 
   .mainheading {
     color: rgb(255, 200, 200);
