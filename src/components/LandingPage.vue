@@ -11,7 +11,7 @@
             corporation
           </h2>
         </div>
-        <div class="Vline"></div>
+        <div class="Hline"></div>
         <div class="backdrop">
           <h1>
             For All Your <br />
@@ -42,39 +42,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .page {
-  display: grid;
-  grid-template-rows: 2fr 4fr 1fr !important;
-  height: 100%;
   font-size: 3em;
   font-family: serif;
-  // font-family: "Candara";
   background: black;
 
   .content {
     background: white;
     display: grid;
     padding: 0;
-    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: 1fr 1px 1fr;
     padding: 20px;
 
     .mainheading {
-      // font-family: "Candara";
       font-family: serif;
-
       text-align: left;
-
       padding: 0;
-
       display: flex;
       margin: 0;
       align-self: center;
-      // align-items: flex-end;
-      justify-content: center;
+      justify-content: flex-start;
       text-transform: capitalize;
+      font-size: 0.7em;
 
       h2 {
-        margin: 0.5em;
-        font-size: 3.5em;
+        margin: 0.5em 0;
         transition-duration: 0.5s;
         z-index: 5000;
         &:hover {
@@ -89,7 +80,7 @@ export default {
       justify-content: center;
       h1 {
         text-transform: capitalize;
-        margin: 20px;
+        margin: 0px;
         text-align: left;
         font-weight: 400;
         font-size: 1em;
@@ -98,17 +89,26 @@ export default {
     }
   }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
   .page {
+    grid-template-rows: 2fr auto 1fr;
     .content {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1px 1fr;
       padding-left: 0 !important;
+      .Hline {
+        height: 100%;
+        width: 0%;
+      }
       .mainheading {
-        font-size: 0.3em;
+        padding: 20px;
+        font-size: 0.8em;
+        justify-content: center;
       }
       .backdrop {
         h1 {
           padding-left: 50px;
-          font-size: 1em;
+          font-size: 0.8em;
         }
       }
     }

@@ -57,14 +57,13 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 ul {
   margin: 0;
   padding: 0;
   li {
-    font-size: 1.5em;
     list-style: none;
     line-height: 1.8em;
     text-transform: capitalize;

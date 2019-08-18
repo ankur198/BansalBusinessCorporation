@@ -95,12 +95,12 @@ export default {
 }
 
 .section .page {
-  grid-template-rows: 2fr 3.5fr 0.5fr;
+  grid-template-rows: 3fr 5fr 1fr;
 
   .mainheading {
     color: rgb(255, 200, 200);
-    padding-bottom: 70px;
-    padding-left: 40px;
+    padding-bottom: 0 !important;
+    align-self: center;
   }
 
   .moreItems {

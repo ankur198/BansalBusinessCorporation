@@ -12,7 +12,7 @@
           :items="3"
           :dots="false"
           :autoheight="true"
-          :autowidth="true"
+          :autowidth="false"
           :loop="true"
           :center="true"
         >
@@ -42,12 +42,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .section .page {
-  grid-template-rows: 1fr 1.2fr 1.3fr;
+  grid-template-rows: 1fr auto auto 1fr;
+  grid-gap: 20px;
 
   .mainheading {
     align-self: flex-start;
     text-align: center;
-    font-size: 2em;
   }
 
   .content {

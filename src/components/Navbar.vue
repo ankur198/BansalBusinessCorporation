@@ -87,7 +87,7 @@ export default {
   font-family: "PT Sans Narrow", sans-serif;
   position: fixed;
   width: 100%;
-  z-index: 5000;
+  z-index: 5001;
   text-transform: capitalize;
   font-weight: bold;
   .mobile {

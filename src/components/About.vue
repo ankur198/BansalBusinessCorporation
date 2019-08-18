@@ -1,39 +1,42 @@
 <template>
   <div class="about">
     <div class="page">
-      <h1 class="mainheading">about</h1>
-      <div class="content">
-        <div class="left">
-          <p>
-            With the commencement of 21st century started the era of modern
-            computers. With far sightedness and entrepreneurial skills, our
-            founder Mr. Sanjay Bansal started Bansal Business Corporation in the
-            year 2000 and started dealing in computer hardwares.
-          </p>
-          <p>
-            With the advancement in technology, the company has been coping up
-            rapidly and as a result of tireless efforts today we are proud to be
-            one of the largest distributor in Delhi NCR. We are happy to serve
-            our thousands of clients with our catalogue having a product range
-            of over 1000 products.
-          </p>
-        </div>
-        <div class="line"></div>
-        <div class="right">
-          <div class="icon">
-            <i class="material-icons">group</i>
-            <IOdometer class="iOdometer" :value="num1" />
-            <h4>Partners</h4>
+      <div></div>
+      <div class="body">
+        <h1 class="mainheading">about</h1>
+        <div class="content">
+          <div class="left">
+            <p>
+              With the commencement of 21st century started the era of modern
+              computers. With far sightedness and entrepreneurial skills, our
+              founder Mr. Sanjay Bansal started Bansal Business Corporation in
+              the year 2000 and started dealing in computer hardwares.
+            </p>
+            <p>
+              With the advancement in technology, the company has been coping up
+              rapidly and as a result of tireless efforts today we are proud to
+              be one of the largest distributor in Delhi NCR. We are happy to
+              serve our thousands of clients with our catalogue having a product
+              range of over 1000 products.
+            </p>
           </div>
-          <div class="icon">
-            <i class="material-icons">devices_other</i>
-            <IOdometer class="iOdometer" :value="num2" />
-            <h4>Products</h4>
-          </div>
-          <div class="icon">
-            <i class="material-icons">sentiment_satisfied_alt</i>
-            <IOdometer class="iOdometer" :value="num3" />
-            <h4>Years of trust</h4>
+          <div class="line"></div>
+          <div class="right">
+            <div class="icon">
+              <i class="material-icons">group</i>
+              <IOdometer class="iOdometer" :value="num1" />
+              <h4>Partners</h4>
+            </div>
+            <div class="icon">
+              <i class="material-icons">devices_other</i>
+              <IOdometer class="iOdometer" :value="num2" />
+              <h4>Products</h4>
+            </div>
+            <div class="icon">
+              <i class="material-icons">sentiment_satisfied_alt</i>
+              <IOdometer class="iOdometer" :value="num3" />
+              <h4>Years of trust</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -56,12 +59,17 @@ export default {
     };
   },
   methods: {
-    checkHeight: function(event) {
-      const itemHeight = document
-        .querySelector("#aboutPage")
-        .getBoundingClientRect();
+    checkHeight: function() {
+      var isInViewport = function(elem) {
+        var bounding = elem.getBoundingClientRect();
+        var x = bounding.top;
+        console.log(x);
+        return x > 0 && x < window.innerHeight;
+      };
 
-      if (itemHeight.top === 0) {
+      const item = document.querySelectorAll(".about .right")[0];
+
+      if (isInViewport(item)) {
         this.num1 = 1000;
         this.num2 = 700;
         this.num3 = 20;
@@ -88,14 +96,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .page {
+}
+.body {
   display: grid;
+  grid-template-rows: auto auto;
 }
 .content {
   display: grid;
-  grid-template-rows: 1.3fr 1px 1fr;
+  grid-template-rows: auto 1px auto;
   grid-gap: 20px;
   text-align: left;
-  padding-right: 10px !important;
+  padding-right: 10px;
 }
 .left {
   display: flex;
@@ -116,7 +127,8 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.6em;
+    // justify-content: center;
+    font-size: 1.4em;
     font-weight: 800;
   }
   .icon > * {
@@ -135,8 +147,12 @@ export default {
   border-radius: 50%;
 }
 @media only screen and (min-width: 950px) {
+  .body {
+    // grid-template-columns: auto auto;
+    // grid-template-rows: 1fr;
+  }
   .content {
-    grid-template-columns: 1.3fr 1px 1fr;
+    grid-template-columns: auto 1px auto;
     grid-template-rows: 1fr;
   }
   .right {

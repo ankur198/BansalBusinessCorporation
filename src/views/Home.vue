@@ -12,7 +12,7 @@
       />
       <Products :products="products[1]" class="section" id="productsPage2" />
       <Partners class="section black" id="partnersPage" />
-      <!-- <Contact class="section" id="contactPage" /> -->
+      <Contact class="section" id="contactPage" />
     </full-page>
   </div>
 </template>
@@ -66,16 +66,16 @@ $WeblySleek: "weblysleekuisb";
 
 .page {
   display: grid;
-  // grid-template-rows: 1fr 4fr;
-  align-items: center;
   height: 100%;
+  align-items: center;
+  grid-template-rows: 1fr auto 1fr;
 
   .mainheading {
     font-family: "Times New Roman", Times, serif;
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: 0;
     text-align: left;
-    padding-top: 60px;
+    // padding-top: 60px;
     margin: 10px 0 0px;
     padding-left: 15px;
     font-weight: 900;
@@ -84,11 +84,11 @@ $WeblySleek: "weblysleekuisb";
   }
 
   .content {
+    display: grid;
     align-self: flex-start;
-    padding: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     padding-top: 10px;
+    height: 100%;
   }
 }
 
@@ -121,6 +121,7 @@ $WeblySleek: "weblysleekuisb";
     font-size: 1em;
     .page {
       .mainheading {
+        font-size: 3em;
         margin: 10px 0 10px;
         padding: 30px;
         padding-left: 30px;
@@ -143,6 +144,7 @@ $WeblySleek: "weblysleekuisb";
       }
       .content {
         padding-left: 100px;
+        padding-right: 100px;
       }
     }
   }
@@ -156,10 +158,9 @@ $WeblySleek: "weblysleekuisb";
         padding-bottom: 50px;
       }
       .content {
-        padding: 0 150px;
+        // padding: 0 150px;
       }
     }
   }
 }
 </style>
-
