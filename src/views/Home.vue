@@ -5,16 +5,12 @@
       <About class="section" id="aboutPage" />
       <Products
         :products="products[0]"
+        :isMore="true"
         heading="products"
         class="section black"
         id="productsPage"
       />
-      <Products
-        :products="products[1]"
-        heading="we got more products"
-        class="section"
-        id="productsPage2"
-      />
+      <Products :products="products[1]" class="section" id="productsPage2" />
       <Partners class="section black" id="partnersPage" />
       <Contact class="section" id="contactPage" />
     </full-page>
@@ -70,27 +66,29 @@ $WeblySleek: "weblysleekuisb";
 
 .page {
   display: grid;
-  grid-template-rows: 1fr 4fr !important;
-  align-items: center;
   height: 100%;
+  align-items: center;
+  grid-template-rows: 1fr auto 1fr;
 
   .mainheading {
-    font-family: $WeblySleek;
-    font-size: 2.5rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
     margin: 0;
     text-align: left;
-    padding: 30px;
-    // padding-bottom: 0;
-    padding-top: 60px;
+    // padding-top: 60px;
     margin: 10px 0 0px;
     padding-left: 15px;
-    font-weight: 500;
+    font-weight: 900;
     text-transform: uppercase;
     align-self: flex-end;
   }
 
   .content {
+    display: grid;
     align-self: flex-start;
+    padding: 15px;
+    padding-top: 10px;
+    height: 100%;
   }
 }
 
@@ -102,10 +100,6 @@ $WeblySleek: "weblysleekuisb";
 .fp-tableCell {
   display: grid;
   align-items: center;
-}
-.content {
-  padding: 30px;
-  padding-left: 15px;
 }
 
 .black {
@@ -126,12 +120,13 @@ $WeblySleek: "weblysleekuisb";
   .section {
     font-size: 1em;
     .page {
-      grid-template-rows: 2fr 4fr !important;
-
       .mainheading {
+        font-size: 3em;
         margin: 10px 0 10px;
-        padding-left: 20px;
+        padding: 30px;
+        padding-left: 30px;
         padding-top: 0;
+        padding-bottom: 0;
       }
       .content {
         padding-left: 50px;
@@ -142,19 +137,30 @@ $WeblySleek: "weblysleekuisb";
 @media only screen and (min-width: 700px) {
   .section {
     font-size: 1.1em;
-    .mainheading {
-      margin: 10px 0 10px;
-      padding-left: 30px;
-    }
-    .content {
-      padding-left: 100px;
+    .page {
+      .mainheading {
+        margin: 10px 0 10px;
+        padding-left: 40px;
+      }
+      .content {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
     }
   }
 }
 @media only screen and (min-width: 1000px) {
   .section {
     font-size: 1.3em;
+    .page {
+      .mainheading {
+        padding-left: 50px;
+        padding-bottom: 50px;
+      }
+      .content {
+        // padding: 0 150px;
+      }
+    }
   }
 }
 </style>
-

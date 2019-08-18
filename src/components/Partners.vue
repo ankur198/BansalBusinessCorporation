@@ -2,26 +2,8 @@
   <div class="partners">
     <Stars />
     <div class="page">
-      <h1 class="mainheading">our proud partners</h1>
+      <div></div>
       <div class="content">
-        <!-- <vueper-slides
-          fade
-          autoplay
-          :speed="1000"
-          :pauseOnHover="false"
-          :slide-ratio="1 / 3"
-          :visible-slides="3"
-          :arrows="false"
-          :dragging-distance="70"
-          :touchable="false"
-          :infinite="true"
-        >
-          <vueper-slide
-            v-for="(brand, i) in internal.images"
-            :key="i"
-            :image="`/img/brands/tinified/${brand}`"
-          ></vueper-slide>
-        </vueper-slides> -->
         <carousel
           class="slides"
           :autoplay="true"
@@ -30,7 +12,7 @@
           :items="3"
           :dots="false"
           :autoheight="true"
-          :autowidth="true"
+          :autowidth="false"
           :loop="true"
           :center="true"
         >
@@ -41,6 +23,7 @@
           />
         </carousel>
       </div>
+      <h1 class="mainheading">partners</h1>
     </div>
   </div>
 </template>
@@ -57,7 +40,23 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
+<style scoped lang="scss">
+.section .page {
+  grid-template-rows: 1fr auto auto 1fr;
+  grid-gap: 20px;
+
+  .mainheading {
+    align-self: flex-start;
+    text-align: center;
+  }
+
+  .content {
+    padding: 0;
+  }
+}
+</style>
+
+<style>
 .content,
 .slides {
   overflow: hidden;

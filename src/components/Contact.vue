@@ -1,35 +1,73 @@
 <template>
   <div class="contact">
     <div class="page">
-      <h1 class="mainheading">CONTACT</h1>
-      <div class="content">
-        <div class="left">
-          <div>
-            <h3>Location</h3>
-            <p>
-              39,Veer Savarkar Block,
-              <br />Vikas Marg Delhi-110092
-            </p>
+      <div></div>
+      <div class="body">
+        <h1 class="mainheading"></h1>
+        <div class="content">
+          <div class="left">
+            <div>
+              <h3>Location</h3>
+              <p>
+                39,Veer Savarkar Block,
+                <br />Vikas Marg Delhi-110092
+              </p>
+            </div>
+            <div class="line"></div>
+            <div>
+              <h3>Contact</h3>
+              <p>
+                bsc43@hotmail.com
+                <br />bansal@bansalworld.in <br />011-49044230/ 8130869001
+              </p>
+              <!-- </div>
+            <div class="line"></div> -->
+              <div class="icons">
+                <a href="#"
+                  ><img
+                    src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="https://img.icons8.com/color/48/000000/whatsapp.png"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
+                /></a>
+              </div>
+            </div>
           </div>
-          <div class="line"></div>
-          <div>
-            <h3>Contact</h3>
-            <p>
-              bsc43@hotmail.com
-              <br />bansal@bansalworld.in
-              <br />011-49044230/ 8130869001
-            </p>
+          <div class="right">
+            <h2>For more queries...</h2>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="number"
+              name="mobile"
+              id="mobile"
+              placeholder="Mobile"
+              required
+            />
+            <textarea name="msg" id="msg" placeholder="Your Text Here..." />
+            <div>
+              <input type="submit" value="Submit" class="btn" />
+            </div>
           </div>
         </div>
-        <div class="right">
-          <h2>For more queries...</h2>
-          <input type="text" name="name" id="name" placeholder="Name" required />
-          <input type="email" name="email" id="email" placeholder="Email" required />
-          <textarea name="msg" id="msg" placeholder="Your Text Here..." />
-          <div>
-            <input type="submit" value="Submit" class="btn" />
-          </div>
-        </div>
+        <div></div>
       </div>
     </div>
   </div>
@@ -46,23 +84,41 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .page {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: center;
-}
-.content {
-  display: flex;
-  flex-direction: column-reverse;
+  .body {
+    display: grid;
+    background: white;
+  }
+  // align-items: center;
+
+  .mainheading {
+    // padding-left: 330px !important;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 5px 0 0;
+  }
 }
 .left {
   display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  grid-gap: 10px;
-  justify-content: flex-start;
+  grid-template-rows: auto 1px auto 1px auto;
+  justify-content: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1.3em;
   text-align: left;
+  padding: 10px;
+
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+
+    img {
+      height: 30px;
+    }
+  }
 }
 .right {
   display: grid;
@@ -75,7 +131,6 @@ export default {
   letter-spacing: 0.08em;
   text-transform: capitalize;
   line-height: 1.3em;
-  margin-bottom: 25px;
   overflow-wrap: break-word;
 }
 h2 {
@@ -84,6 +139,8 @@ h2 {
   color: #081b33;
 }
 h3 {
+  margin: 0.5em;
+  margin-left: 0;
   color: #e54a35;
 }
 
@@ -102,22 +159,46 @@ textarea {
 }
 .line {
   border: 1px solid;
-  width: 0px;
+  height: 0px;
   border-radius: 50%;
 }
+@media only screen and (min-width: 500px) {
+  .page {
+    .body {
+      .line {
+        width: 0;
+        height: unset;
+      }
+      .content {
+        .left {
+          grid-template-columns: auto 1px auto;
+          grid-template-rows: auto;
+          grid-gap: 10px;
+
+          .icons {
+            // flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
 @media only screen and (min-width: 700px) {
-  .content {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .left {
-    grid-template-rows: 1fr 1px 1fr;
-    grid-template-columns: unset;
-    text-align: center;
-  }
-  .line {
-    width: unset;
-    height: 0;
+  .page .body {
+    .line {
+      height: 0;
+      width: unset;
+    }
+    .content {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .left {
+        grid-template-rows: auto 1px auto;
+        grid-template-columns: auto;
+        text-align: center;
+      }
+    }
   }
   input,
   textarea {
