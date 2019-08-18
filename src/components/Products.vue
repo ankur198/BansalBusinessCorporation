@@ -101,6 +101,10 @@ export default {
   }
 }
 
+.Vline {
+  margin: 30px 0;
+}
+
 .white {
   color: black !important;
 }
@@ -139,6 +143,7 @@ export default {
   text-align: left;
   // height: 100%;
   grid-gap: 5px;
+  margin: 10px 0;
 }
 @media only screen and (min-width: 500px) {
   .content {
