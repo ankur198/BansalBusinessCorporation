@@ -110,7 +110,7 @@ export default {
 
   .mainheading {
     color: rgb(255, 200, 200);
-    padding-bottom: 0 !important;
+    padding-bottom: 0px !important;
     align-self: center;
   }
 

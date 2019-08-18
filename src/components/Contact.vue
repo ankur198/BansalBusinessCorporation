@@ -23,17 +23,19 @@
               <!-- </div>
             <div class="line"></div> -->
               <div class="icons">
-                <a href="#"
-                  ><img
-                    src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png"
-                /></a>
-                <a href="#"
+                <a target="_blank" href="https://wa.me/919810020958"
                   ><img
                     src="https://img.icons8.com/color/48/000000/whatsapp.png"
                 /></a>
-                <a href="#"
+                <a
+                  target="_blank"
+                  href="https://linkedin.com/company/bansal-business-corporations"
                   ><img
                     src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
+                /></a>
+                <a href="https://goo.gl/maps/jqKqSwd76YWfX2qH6"
+                  ><img
+                    src="https://img.icons8.com/color/48/000000/google-maps.png"
                 /></a>
               </div>
             </div>
@@ -162,7 +164,16 @@ textarea {
   height: 0px;
   border-radius: 50%;
 }
+.desktop {
+  display: none;
+}
 @media only screen and (min-width: 500px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
   .page {
     .body {
       .line {
