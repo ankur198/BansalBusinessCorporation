@@ -115,7 +115,7 @@ export default {
   }
 }
 @media only screen and (min-width: 850px) {
-  .page {
+  .page .content {
     .backdrop {
       h1 {
         font-size: 1em;

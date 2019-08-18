@@ -35,6 +35,12 @@
           keyboard_arrow_down
         </i>
       </a>
+      <a href="#" v-scroll-to="'#productsPage'" v-else class="moreItems white">
+        Back to top
+        <i class="material-icons">
+          keyboard_arrow_up
+        </i>
+      </a>
     </div>
   </div>
 </template>
@@ -92,6 +98,10 @@ export default {
   to {
     transform: translateY(5px);
   }
+}
+
+.white {
+  color: black !important;
 }
 
 .section .page {
