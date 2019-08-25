@@ -31,17 +31,15 @@ export default {
   components: { Stars },
   async mounted() {
     this.blinkAll();
-
-    // const allBrands = document.querySelectorAll(".brand");
-    // await this.fadeBrand(allBrands[0]);
-    // console.log("hii");
   },
   methods: {
     blinkAll: async function() {
       const allBrands = document.querySelectorAll(".brand");
-      for (let index = 0; index < allBrands.length; index++) {
-        const brand = allBrands[index];
-        await this.fadeBrand(brand);
+      while (true) {
+        for (let index = 0; index < allBrands.length; index++) {
+          const brand = allBrands[index];
+          await this.fadeBrand(brand);
+        }
       }
     },
 
@@ -70,6 +68,7 @@ export default {
 
   .map {
     position: relative;
+    max-width: 1500px;
 
     .worldMap {
       display: block;
@@ -90,102 +89,113 @@ export default {
       height: 100%;
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       z-index: 10;
+
+      .active {
+        opacity: 1;
+        animation: fade 2s 0s;
+        animation-iteration-count: 1;
+        height: auto;
+        width: 400% !important;
+      }
 
       .brand {
         height: auto;
         width: 100%;
         opacity: 0;
+        // display: none;
 
         // japan
         &:nth-child(1) {
-          grid-row: 5;
-          grid-column: 10;
+          grid-row: 6;
+          grid-column: 11;
         }
+        // japan
         &:nth-child(2) {
-          grid-row: 5;
-          grid-column: 10;
-        }
-        // texas,usa
-        &:nth-child(3) {
-          grid-row: 5;
-          grid-column: 2;
+          grid-row: 6;
+          grid-column: 11;
         }
         // japan
         &:nth-child(4) {
-          grid-row: 5;
-          grid-column: 10;
-        }
-        // usa
-        &:nth-child(5) {
-          grid-row: 4;
-          grid-column: 2;
-        }
-        // usa
-        &:nth-child(6) {
-          grid-row: 4;
-          grid-column: 2;
-        }
-        // india
-        &:nth-child(7) {
           grid-row: 6;
-          grid-column: 8;
-        }
-        // switzerland
-        &:nth-child(8) {
-          grid-row: 4;
-          grid-column: 6;
-        }
-        // india
-        &:nth-child(9) {
-          grid-row: 6;
-          grid-column: 8;
-        }
-        // india
-        &:nth-child(10) {
-          grid-row: 6;
-          grid-column: 8;
-        }
-        // india
-        &:nth-child(11) {
-          grid-row: 6;
-          grid-column: 8;
+          grid-column: 11;
         }
         // japan
         &:nth-child(12) {
-          grid-row: 5;
-          grid-column: 10;
+          grid-row: 6;
+          grid-column: 11;
         }
         // korea
         &:nth-child(13) {
-          grid-row: 5;
-          grid-column: 10;
+          grid-row: 6;
+          grid-column: 11;
         }
         // japan
         &:nth-child(14) {
-          grid-row: 5;
-          grid-column: 10;
-        }
-        // india
-        &:nth-child(15) {
           grid-row: 6;
-          grid-column: 8;
+          grid-column: 11;
+        }
+
+        // usa
+        &:nth-child(3) {
+          grid-row: 5;
+          grid-column: 1;
+        }
+        // usa
+        &:nth-child(5) {
+          grid-row: 5;
+          grid-column: 1;
+        }
+        // usa
+        &:nth-child(6) {
+          grid-row: 5;
+          grid-column: 1;
         }
         // usa
         &:nth-child(16) {
-          grid-row: 4;
-          grid-column: 2;
+          grid-row: 5;
+          grid-column: 1;
         }
+        // usa
         &:nth-child(17) {
-          grid-row: 4;
-          grid-column: 2;
+          grid-row: 5;
+          grid-column: 1;
         }
-      }
 
-      .active {
-        opacity: 1;
+        // india
+        &:nth-child(7) {
+          grid-row: 8;
+          grid-column: 9;
+        }
+        // india
+        &:nth-child(9) {
+          grid-row: 8;
+          grid-column: 9;
+        }
+        // india
+        &:nth-child(15) {
+          grid-row: 8;
+          grid-column: 9;
+        }
+        // india
+        &:nth-child(10) {
+          grid-row: 8;
+          grid-column: 9;
+        }
+        // india
+        &:nth-child(11) {
+          grid-row: 8;
+          grid-column: 9;
+        }
+
+        // switzerland
+        &:nth-child(8) {
+          position: relative;
+          grid-row: 5;
+          grid-column: 6;
+        }
       }
 
       @keyframes fade {
@@ -209,6 +219,8 @@ export default {
 
   .content {
     padding: 0;
+    display: grid;
+    justify-content: center;
   }
 }
 </style>
