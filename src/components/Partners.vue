@@ -215,6 +215,7 @@ export default {
   .mainheading {
     align-self: flex-start;
     text-align: center;
+    padding-bottom: 0;
   }
 
   .content {

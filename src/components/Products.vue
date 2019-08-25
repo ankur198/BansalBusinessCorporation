@@ -113,7 +113,6 @@ export default {
   grid-template-rows: 1fr auto 5fr 1fr;
 
   .mainheading {
-    color: rgb(255, 200, 200);
     padding-bottom: 0px !important;
     align-self: center;
   }
