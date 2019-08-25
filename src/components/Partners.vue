@@ -3,6 +3,7 @@
     <Stars />
     <div class="page">
       <div></div>
+      <h1 class="mainheading">our global partners</h1>
       <div class="content">
         <div class="map">
           <Stars />
@@ -17,7 +18,6 @@
           </div>
         </div>
       </div>
-      <h1 class="mainheading">partners</h1>
     </div>
   </div>
 </template>
