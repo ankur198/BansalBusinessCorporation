@@ -24,17 +24,17 @@
           <div class="right">
             <div class="icon">
               <i class="material-icons">group</i>
-              <IOdometer class="iOdometer" :value="num1" />
+              <ICountUp class="iCountUp" :endVal="num1" />
               <h4>Partners</h4>
             </div>
             <div class="icon">
               <i class="material-icons">devices_other</i>
-              <IOdometer class="iOdometer" :value="num2" />
+              <ICountUp class="iCountUp" :endVal="num2" />
               <h4>Products</h4>
             </div>
             <div class="icon">
-              <img src="img/handshake.svg" alt="">
-              <IOdometer class="iOdometer" :value="num3" />
+              <img src="img/handshake.svg" alt="handshake" />
+              <ICountUp class="iCountUp" :endVal="num3" />
               <h4>Years of trust</h4>
             </div>
           </div>
@@ -45,12 +45,11 @@
 </template>
 
 <script>
-import IOdometer from "vue-odometer";
-import "odometer/themes/odometer-theme-default.css";
+import ICountUp from "vue-countup-v2";
 
 export default {
   name: "about",
-  components: { IOdometer },
+  components: { ICountUp },
   data: function() {
     return {
       num1: 0,
@@ -86,7 +85,7 @@ export default {
 </script>
 
 <style lang="scss">
-.odometer-inside {
+.iCountUp {
   &::after {
     content: "+";
   }
@@ -130,7 +129,7 @@ export default {
     font-size: 1.4em;
     font-weight: 800;
 
-    img{
+    img {
       width: 55px;
       height: auto;
     }
@@ -152,18 +151,18 @@ export default {
 }
 
 @media only screen and (min-width: 500px) {
-  .right{
-    .icon{
-      img{
+  .right {
+    .icon {
+      img {
         width: 65px;
       }
     }
   }
 }
 @media only screen and (min-width: 700px) {
-  .right{
-    .icon{
-      img{
+  .right {
+    .icon {
+      img {
         width: 70px;
       }
     }
