@@ -63,7 +63,6 @@ export default {
       var isInViewport = function(elem) {
         var bounding = elem.getBoundingClientRect();
         var x = bounding.top;
-        console.log(x);
         return x > 0 && x < window.innerHeight;
       };
 

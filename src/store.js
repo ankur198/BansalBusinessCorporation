@@ -15,9 +15,7 @@ export default new Vuex.Store({
                 "epson.png",
                 "honeywell.png",
                 "hp.png",
-
                 "intex.png",
-                "kodak.png",
                 "logitech.png",
                 "luminous.png",
                 "microtek.png",
