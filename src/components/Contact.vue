@@ -17,9 +17,12 @@
             <div>
               <h3>Contact</h3>
               <p>
-                bsc43@hotmail.com
-                <br />bansal@bansalworld.in
-                <br />011-49044230/ 8130869001
+                <a href="mailto:bsc43@hotmail.com">bsc43@hotmail.com</a>
+                <br />
+                <a href="mailto:bansal@bansalworld.in">bansal@bansalworld.in</a>
+                <br />
+                <a href="tel:011-49044230">011-49044230</a>/
+                <a href="tel:+918130869001">8130869001</a>
               </p>
               <!-- </div>
               <div class="line"></div>-->
@@ -45,13 +48,15 @@
           </div>
           <div class="right">
             <h2>For more queries...</h2>
-            <input type="text" name="name" id="name" placeholder="Name" required />
-            <input type="email" name="email" id="email" placeholder="Email" required />
-            <input type="number" name="mobile" id="mobile" placeholder="Mobile" required />
-            <textarea name="msg" id="msg" placeholder="Your Text Here..." />
-            <div>
-              <input type="submit" value="Submit" class="btn" />
-            </div>
+            <form action="https://getform.io/f/f43f0190-ba17-4ca3-a5cc-137b39cfc979" method="post">
+              <input type="text" name="name" id="name" placeholder="Name" required />
+              <input type="email" name="email" id="email" placeholder="Email" required />
+              <input type="text" name="tel" id="mobile" placeholder="Mobile" required />
+              <textarea name="msg" id="msg" placeholder="Your Text Here..." />
+              <div>
+                <input type="submit" value="Submit" class="btn" />
+              </div>
+            </form>
           </div>
         </div>
         <div></div>
@@ -102,6 +107,10 @@ export default {
       height: 30px;
     }
   }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 .right {
   display: grid;
@@ -109,12 +118,16 @@ export default {
   align-items: center;
   grid-gap: 10px;
   font-family: "Candara";
-  font-weight: 500;
-  font-style: normal;
   letter-spacing: 0.08em;
   text-transform: capitalize;
   line-height: 1.3em;
   overflow-wrap: break-word;
+  form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+  }
 }
 h2 {
   margin: 0;

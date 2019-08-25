@@ -55,10 +55,10 @@ export default {
 <style lang="scss">
 // @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 // @import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Slab&display=swap");
-@font-face {
-  font-family: weblysleekuisb;
-  src: url(../../public/weblysleekuisb.ttf);
-}
+// @font-face {
+//   font-family: weblysleekuisb;
+//   src: url(../../public/weblysleekuisb.ttf);
+// }
 // $Montserrat: "Montserrat", sans-serif;
 // $Roboto: "Roboto", sans-serif;
 // $RobotoSlab: "Roboto Slab", serif;
