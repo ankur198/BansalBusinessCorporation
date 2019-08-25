@@ -70,6 +70,7 @@ export default {
   .map {
     position: relative;
     max-width: 1500px;
+    transform: translateY(-50px);
 
     .worldMap {
       display: block;
@@ -217,6 +218,7 @@ export default {
     align-self: flex-start;
     text-align: center;
     padding-bottom: 0;
+    padding-top: 100px;
   }
 
   .content {
