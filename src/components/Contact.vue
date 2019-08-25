@@ -18,54 +18,36 @@
               <h3>Contact</h3>
               <p>
                 bsc43@hotmail.com
-                <br />bansal@bansalworld.in <br />011-49044230/ 8130869001
+                <br />bansal@bansalworld.in
+                <br />011-49044230/ 8130869001
               </p>
               <!-- </div>
-            <div class="line"></div> -->
+              <div class="line"></div>-->
               <div class="icons">
-                <a target="_blank" href="https://wa.me/919810020958"
-                  ><img
-                    src="https://img.icons8.com/color/48/000000/whatsapp.png"
-                    alt="whatsapp"
-                /></a>
+                <a target="_blank" href="https://wa.me/919810020958" rel="noreferrer">
+                  <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="whatsapp" />
+                </a>
                 <a
                   target="_blank"
                   href="https://linkedin.com/company/bansal-business-corporations"
-                  ><img
+                  rel="noreferrer"
+                >
+                  <img
                     src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
                     alt="linkedin"
-                /></a>
-                <a href="https://goo.gl/maps/jqKqSwd76YWfX2qH6"
-                  ><img
-                    src="https://img.icons8.com/color/48/000000/google-maps.png"
-                    alt="maps"
-                /></a>
+                  />
+                </a>
+                <a target="_blank" href="https://goo.gl/maps/jqKqSwd76YWfX2qH6" rel="noreferrer">
+                  <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="maps" />
+                </a>
               </div>
             </div>
           </div>
           <div class="right">
             <h2>For more queries...</h2>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-            <input
-              type="number"
-              name="mobile"
-              id="mobile"
-              placeholder="Mobile"
-              required
-            />
+            <input type="text" name="name" id="name" placeholder="Name" required />
+            <input type="email" name="email" id="email" placeholder="Email" required />
+            <input type="number" name="mobile" id="mobile" placeholder="Mobile" required />
             <textarea name="msg" id="msg" placeholder="Your Text Here..." />
             <div>
               <input type="submit" value="Submit" class="btn" />
@@ -94,10 +76,6 @@ export default {
     background: white;
   }
   // align-items: center;
-
-  .mainheading {
-    // padding-left: 330px !important;
-  }
 
   .content {
     display: flex;
@@ -188,10 +166,6 @@ textarea {
           grid-template-columns: auto 1px auto;
           grid-template-rows: auto;
           grid-gap: 10px;
-
-          .icons {
-            // flex-direction: column;
-          }
         }
       }
     }

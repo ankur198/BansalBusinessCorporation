@@ -93,8 +93,6 @@ export default {
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.page {
-}
 .body {
   display: grid;
   grid-template-rows: auto auto;
@@ -170,10 +168,6 @@ export default {
 }
 
 @media only screen and (min-width: 950px) {
-  .body {
-    // grid-template-columns: auto auto;
-    // grid-template-rows: 1fr;
-  }
   .content {
     grid-template-columns: auto 1px auto;
     grid-template-rows: 1fr;
