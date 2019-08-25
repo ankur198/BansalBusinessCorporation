@@ -26,16 +26,19 @@
                 <a target="_blank" href="https://wa.me/919810020958"
                   ><img
                     src="https://img.icons8.com/color/48/000000/whatsapp.png"
+                    alt="whatsapp"
                 /></a>
                 <a
                   target="_blank"
                   href="https://linkedin.com/company/bansal-business-corporations"
                   ><img
                     src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
+                    alt="linkedin"
                 /></a>
                 <a href="https://goo.gl/maps/jqKqSwd76YWfX2qH6"
                   ><img
                     src="https://img.icons8.com/color/48/000000/google-maps.png"
+                    alt="maps"
                 /></a>
               </div>
             </div>
