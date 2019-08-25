@@ -25,23 +25,22 @@
           <ProductsList :products="subsubcategory" />
         </div>
       </div>
-      <a
-        href="#"
-        v-scroll-to="'#productsPage2'"
-        v-if="isMore"
-        class="moreItems"
-      >
-        We got more products
-        <i class="material-icons">
-          keyboard_arrow_down
-        </i>
-      </a>
-      <a href="#" v-scroll-to="'#productsPage'" v-else class="moreItems white">
-        Back to top
-        <i class="material-icons">
-          keyboard_arrow_up
-        </i>
-      </a>
+      <div class="footer" v-if="isMore">
+        <a href="#" v-scroll-to="'#productsPage2'" class="moreItems">
+          We got more products
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </div>
+      <div v-else class="footer spaceBetween">
+        <a href="#" v-scroll-to="'#partnersPage'" class="moreItems white" style>
+          To know more
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+        <a href="#" v-scroll-to="'#productsPage'" class="moreItems white">
+          Back to top
+          <i class="material-icons">keyboard_arrow_up</i>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -117,22 +116,28 @@ export default {
     align-self: center;
   }
 
-  .moreItems {
-    color: white;
-    text-decoration: none;
-    margin-right: 30px;
+  .footer {
+    margin: 0 30px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    text-align: end;
 
-    i {
-      padding-top: 5px;
-      animation-name: smoothBounce;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
+    .moreItems {
+      color: white;
+      text-decoration: none;
+      text-align: end;
+
+      i {
+        padding-top: 5px;
+        animation-name: smoothBounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
     }
+  }
+  .spaceBetween{
+    justify-content: space-between;
   }
 }
 

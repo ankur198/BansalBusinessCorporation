@@ -127,6 +127,8 @@ export default {
     justify-content: center;
     align-items: center;
     grid-gap: 10px;
+    height: 100%;
+    width: 100%;
   }
 }
 h2 {
