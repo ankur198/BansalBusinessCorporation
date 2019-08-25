@@ -12,7 +12,7 @@
             <img
               v-for="image in internal.images"
               :key="image.id"
-              :src="`img/brands/tinified/${image}`"
+              :src="`img/brands/blackBg/${image}`"
               :alt="image"
               class="brand"
             />
