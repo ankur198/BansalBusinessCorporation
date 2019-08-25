@@ -13,9 +13,9 @@
               the year 2000 and started dealing in computer hardwares.
             </p>
             <p>
-              With the advancement in technology, the company has been coping up
+              With the advancement in technology, the company has been growing
               rapidly and as a result of tireless efforts today we are proud to
-              be one of the largest distributor in Delhi NCR. We are happy to
+              be one of the largest distributors in Delhi NCR. We are happy to
               serve our thousands of clients with our catalogue having a product
               range of over 1000 products.
             </p>
@@ -33,7 +33,7 @@
               <h4>Products</h4>
             </div>
             <div class="icon">
-              <i class="material-icons">sentiment_satisfied_alt</i>
+              <img src="img/handshake.svg" alt="">
               <IOdometer class="iOdometer" :value="num3" />
               <h4>Years of trust</h4>
             </div>
@@ -129,6 +129,11 @@ export default {
     // justify-content: center;
     font-size: 1.4em;
     font-weight: 800;
+
+    img{
+      width: 55px;
+      height: auto;
+    }
   }
   .icon > * {
     padding: 5px 10px;
@@ -145,6 +150,26 @@ export default {
   height: 0px;
   border-radius: 50%;
 }
+
+@media only screen and (min-width: 500px) {
+  .right{
+    .icon{
+      img{
+        width: 65px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 700px) {
+  .right{
+    .icon{
+      img{
+        width: 70px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 950px) {
   .body {
     // grid-template-columns: auto auto;
