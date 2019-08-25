@@ -29,7 +29,7 @@ export default new Vuex.Store({
             ]
         },
         brandName: "Bansal Business Corporation",
-        contact: "011-49044230",
+        contact: "",
         address:
             "D21, Mahalaxmi Nagar, Malviya Nagar, Jaipur - 302017 (Behind World Trade Park), Rajasthan, India",
         email: "abc@xyz.com",

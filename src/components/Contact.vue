@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="right">
-            <h2>For more queries...</h2>
+            <h2>For more queries:</h2>
             <form action="https://getform.io/f/f43f0190-ba17-4ca3-a5cc-137b39cfc979" method="post">
               <input type="text" name="name" id="name" placeholder="Name" required />
               <input type="email" name="email" id="email" placeholder="Email" required />
@@ -97,7 +97,9 @@ export default {
   line-height: 1.3em;
   text-align: left;
   padding: 10px;
-
+  a {
+    text-transform: lowercase;
+  }
   .icons {
     display: flex;
     justify-content: space-evenly;

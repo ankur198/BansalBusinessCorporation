@@ -32,8 +32,18 @@ export default {
   components: { Stars },
   async mounted() {
     this.blinkAll();
+    setInterval(this.calibrateOverlay,1000);
+    // this.calibrateOverlay();
+    window.addEventListener("resize", () => this.calibrateOverlay());
   },
   methods: {
+    calibrateOverlay: function() {
+      const map = document.querySelector(".worldMap");
+      const over = document.querySelector(".overlay");
+      over.style.height = `${map.clientHeight}px`;
+      over.style.width = `${map.clientWidth}px`;
+    },
+
     blinkAll: async function() {
       const allBrands = document.querySelectorAll(".brand");
       while (true) {
@@ -63,21 +73,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .section .page {
-  grid-template-rows: 1fr auto auto 1fr;
+  grid-template-rows: 1fr auto 9fr 1fr;
   grid-gap: 20px;
   height: 100vh;
 
   .map {
     position: relative;
     max-width: 1500px;
-    transform: translateY(-50px);
-
     .worldMap {
       display: block;
-      height: auto;
-      width: 100%;
-      max-width: 100vw;
-      max-height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
       filter: alpha(opacity=0);
       opacity: 1;
     }
