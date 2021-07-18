@@ -21,8 +21,8 @@
                 <br />
                 <a href="mailto:bansal@bansalworld.in">bansal@bansalworld.in</a>
                 <br />
-                <a href="tel:011-49044230">011-49044230</a>/
-                <a href="tel:+918130869001">8130869001</a>
+                <a href="tel:011-43108329">011-43108329</a>/
+                <a href="tel:+919350388999">9350388999</a>
               </p>
               <!-- </div>
               <div class="line"></div>-->
