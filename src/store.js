@@ -28,7 +28,7 @@ export default new Vuex.Store({
                 "zebra.png"
             ]
         },
-        brandName: "Bansal Business Corporation",
+        brandName: "Ankur Business Corporation",
         contact: "",
         address:
             "D21, Mahalaxmi Nagar, Malviya Nagar, Jaipur - 302017 (Behind World Trade Park), Rajasthan, India",
